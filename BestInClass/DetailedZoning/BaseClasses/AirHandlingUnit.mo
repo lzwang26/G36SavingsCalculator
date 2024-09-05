@@ -439,7 +439,8 @@ equation
   connect(freSta.y,or2. u1) annotation (Line(points={{108,10},{126,10},{126,-48},
           {66,-48},{66,-68},{84,-68}},                       color={255,0,255}));
   connect(or2.u2,modeSelector. yFan) annotation (Line(points={{84,-76},{66,-76},
-          {66,-208},{-93.5455,-208}},color={255,0,255}));
+          {66,-203.455},{-93.0909,-203.455}},
+                                     color={255,0,255}));
   connect(or2.y,swiHeaCoi. u2) annotation (Line(points={{108,-68},{126,-68},{
           126,-120},{144,-120}},                color={255,0,255}));
   connect(TRooMin, controlBus.TRooMin) annotation (Line(points={{-200,-240},{
@@ -513,8 +514,9 @@ equation
   connect(senSupFlo.port_b, supplyAir)   annotation (Line(points={{440,62},{482,62}}, color={0,127,255}));
   connect(dpDisSupFan.port_b, amb.ports[3]) annotation (Line(points={{358,112},
           {358,118},{-14,118},{-14,54.0667},{-28,54.0667}},color={0,127,255}));
-  connect(modeSelector.yFan, fanOn) annotation (Line(points={{-93.5455,-208},{
-          436,-208},{436,-220},{490,-220}}, color={255,0,255}));
+  connect(modeSelector.yFan, fanOn) annotation (Line(points={{-93.0909,-203.455},
+          {436,-203.455},{436,-220},{490,-220}},
+                                            color={255,0,255}));
   connect(dpDisSupFan.p_rel, dPFan) annotation (Line(points={{349,102},{330,102},
           {330,140},{490,140}}, color={0,0,127},
       pattern=LinePattern.Dash));
@@ -535,8 +537,9 @@ equation
           146,-244},{158,-244}}, color={255,0,255}));
   connect(logSwi.y, swiCooCoi.u2) annotation (Line(points={{182,-252},{202,-252},
           {202,-198},{124,-198},{124,-158},{144,-158}}, color={255,0,255}));
-  connect(modeSelector.yFan, logSwi.u3) annotation (Line(points={{-93.5455,-208},
-          {-60,-208},{-60,-276},{138,-276},{138,-260},{158,-260}}, color={255,0,
+  connect(modeSelector.yFan, logSwi.u3) annotation (Line(points={{-93.0909,
+          -203.455},{-60,-203.455},{-60,-276},{138,-276},{138,-260},{158,-260}},
+                                                                   color={255,0,
           255}));
   annotation (
   defaultComponentName="AHU",

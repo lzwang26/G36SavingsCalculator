@@ -32,7 +32,7 @@ block RoomVAV "Controller for room VAV box"
   Modelica.Blocks.Interfaces.RealOutput yDam "Signal for VAV damper"
     annotation (Placement(transformation(extent={{100,-50},{120,-30}})));
 
-  Buildings.Controls.OBC.CDL.Continuous.LimPID conHea(
+  Buildings.Controls.OBC.CDL.Continuous.PID conHea(
     yMax=1,
     xi_start=0.1,
     Td=60,
@@ -42,7 +42,7 @@ block RoomVAV "Controller for room VAV box"
     controllerType=Buildings.Controls.OBC.CDL.Types.SimpleController.P)
             "Controller for heating"
     annotation (Placement(transformation(extent={{-20,40},{0,60}})));
-  Buildings.Controls.Continuous.LimPID conCoo(
+  Buildings.Controls.OBC.CDL.Continuous.PID conCoo(
     yMax=1,
     Td=60,
     k=0.1,
@@ -82,7 +82,7 @@ equation
           -40}}, color={0,0,127}));
   connect(PerFlo, max.u2) annotation (Line(points={{-120,-80},{-52,-80},{-52,
           -66},{18,-66}}, color={0,0,127}));
-  connect(conCoo.y, max.u1) annotation (Line(points={{1,-10},{10,-10},{10,-54},
+  connect(conCoo.y, max.u1) annotation (Line(points={{2,-10},{10,-10},{10,-54},
           {18,-54}}, color={0,0,127}));
   annotation ( Icon(graphics={
         Text(

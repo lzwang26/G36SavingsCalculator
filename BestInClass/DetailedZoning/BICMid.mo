@@ -67,7 +67,8 @@ equation
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
         coordinateSystem(preserveAspectRatio=false)),
     experiment(
-      StopTime=86400,
+      StartTime=15552000,
+      StopTime=15724800,
       Interval=599.999616,
       __Dymola_Algorithm="Cvode"));
 end BICMid;

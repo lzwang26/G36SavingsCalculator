@@ -36,6 +36,7 @@ model ZoneVAV "Base class with a zone and a VAV box"
         extent={{-10,-10},{10,10}},
         rotation=90,
         origin={-30,-20})));
+
   Buildings.Examples.VAVReheat.ThermalZones.VAVBranch VAVbox(
     redeclare package MediumA = MediumA,
     redeclare package MediumW = MediumW,
@@ -126,8 +127,8 @@ equation
       thickness=0.5));
   connect(TSupRoo.port_b, VSupRoo_flow.port_a)   annotation (Line(points={{-30,-10},{-30,0}},color={0,127,255}));
   connect(TSupRoo.port_a, VAVbox.port_b)   annotation (Line(points={{-30,-30},{-30,-48}}, color={0,127,255}));
-  connect(zon.TAir, TAir) annotation (Line(points={{1,113.8},{80,113.8},{80,30},
-          {110,30}},color={0,0,127}));
+  connect(zon.TAir, TAir) annotation (Line(points={{1,118},{80,118},{80,30},{110,
+          30}},     color={0,0,127}));
   connect(conVAVRoo.yVal, VAVbox.yVal) annotation (Line(points={{-59,-75},{-54,
           -75},{-54,-76},{-44,-76}}, color={0,0,127}));
   connect(conVAVRoo.yDam, VAVbox.yVAV) annotation (Line(points={{-59,-65.2},{-56,

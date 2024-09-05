@@ -150,11 +150,11 @@ equation
       index=-1,
       extent={{-6,3},{-6,3}}));
   connect(yOATMix.TRet, TRet) annotation (Line(
-      points={{18,174},{-90,174},{-90,160},{-120,160}},
+      points={{18,176},{-90,176},{-90,160},{-120,160}},
       color={0,0,127},
       smooth=Smooth.None));
   connect(controlBus.TOut, yOATMix.TOut) annotation (Line(
-      points={{-40,60},{-40,170},{18,170}},
+      points={{-40,60},{-40,172},{18,172}},
       color={255,204,51},
       thickness=0.5,
       smooth=Smooth.None), Text(
@@ -162,15 +162,15 @@ equation
       index=-1,
       extent={{-6,3},{-6,3}}));
   connect(yOATMix.TMix, TMix) annotation (Line(
-      points={{18,166},{-80,166},{-80,100},{-120,100}},
+      points={{18,168},{-80,168},{-80,100},{-120,100}},
       color={0,0,127},
       smooth=Smooth.None));
   connect(yOATMix.TMixSet, TSetMix.TSet) annotation (Line(
-      points={{18,162},{6,162},{6,75},{1,75}},
+      points={{18,164},{6,164},{6,75},{1,75}},
       color={0,0,127},
       smooth=Smooth.None));
   connect(yOATMix.yOA, max.u1) annotation (Line(
-      points={{42,170},{74,170},{74,6},{78,6}},
+      points={{41,170},{74,170},{74,6},{78,6}},
       color={0,0,127},
       smooth=Smooth.None));
   connect(min.u2, conV_flow.y) annotation (Line(

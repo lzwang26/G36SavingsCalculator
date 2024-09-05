@@ -515,11 +515,11 @@ equation
           -60},{-50,-60},{-50,-20},{140,-20},{140,4},{148,4}}, color={255,127,0}));
   connect(intRep.y, TZonSet.uOpeMod) annotation (Line(points={{-18,-60},{-14,
           -60},{-14,-80},{-88,-80},{-88,-87},{-82,-87}}, color={255,127,0}));
-  connect(TZonSet[1].TZonCooSet, Building.TRooCooSet) annotation (Line(points={
-          {-58,-92},{6,-92},{6,-24},{144,-24},{144,10},{149,10}}, color={0,0,
+  connect(TZonSet[1].TZonCooSet, Building.TRooCooSet) annotation (Line(points={{-58,-92},
+          {6,-92},{6,-24},{144,-24},{144,10},{149,10}},           color={0,0,
           127}));
-  connect(TZonSet[1].TZonHeaSet, Building.TRooHeaSet) annotation (Line(points={
-          {-58,-100},{8,-100},{8,-26},{146,-26},{146,13},{149,13}}, color={0,0,
+  connect(TZonSet[1].TZonHeaSet, Building.TRooHeaSet) annotation (Line(points={{-58,
+          -100},{8,-100},{8,-26},{146,-26},{146,13},{149,13}},      color={0,0,
           127}));
   connect(demLimLev.y, TZonSet.uCooDemLimLev) annotation (Line(points={{-98,
           -116},{-88,-116},{-88,-106},{-82,-106}}, color={255,127,0}));
@@ -589,7 +589,8 @@ equation
         color={0,0,127}));
   annotation (Diagram(coordinateSystem(extent={{-260,-140},{200,140}})),
       experiment(
-      StopTime=259200,
+      StartTime=15638400,
+      StopTime=15811200,
       Interval=599.999616,
-      __Dymola_Algorithm="Cvode"));
+      __Dymola_Algorithm="Dassl"));
 end Guideline36;
