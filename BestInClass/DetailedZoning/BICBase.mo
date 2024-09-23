@@ -34,7 +34,9 @@ equation
                     graphics={
         Line(points={{-142,48}}, color={28,108,200})}),
     experiment(
-      StopTime=86400,
+      StartTime=20390400,
+      StopTime=20649600,
       Interval=599.999616,
-      __Dymola_Algorithm="Cvode"));
+      __Dymola_Algorithm="Cvode"),
+    __Dymola_Commands(file="modelica://BestInClass/DetailedZoning/BaseModelError.mos" "BaseModelError"));
 end BICBase;
