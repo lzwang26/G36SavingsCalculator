@@ -115,12 +115,15 @@ model ZoneVAV "Base class with a zone and a VAV box"
     "Radiant, convective and latent heat input into room (positive if heat gain)"
     annotation (Placement(transformation(extent={{-140,20},{-100,60}}),
         iconTransformation(extent={{-120,40},{-100,60}})));
+  Modelica.Fluid.Sensors.Temperature temperature(
+  redeclare package Medium = MediumA)
+    annotation (Placement(transformation(extent={{-118,-150},{-98,-130}})));
 equation
-  connect(VSupRoo_flow.port_b, zon.ports[1]) annotation (Line(points={{-30,20},
-          {-30,80},{-22,80},{-22,80.9}},
+  connect(VSupRoo_flow.port_b, zon.ports[1]) annotation (Line(points={{-30,20},{
+          -30,80},{-21,80},{-21,80.9}},
                                   color={0,127,255}));
-  connect(splRetRoo.port_3, zon.ports[2]) annotation (Line(points={{10,58},{10,
-          70},{-18,70},{-18,80.9}}, color={0,127,255}));
+  connect(splRetRoo.port_3, zon.ports[2]) annotation (Line(points={{10,58},{10,70},
+          {-19,70},{-19,80.9}},     color={0,127,255}));
   connect(splSupRoo.port_3, VAVbox.port_a) annotation (Line(
       points={{-30,-110},{-30,-88}},
       color={0,127,255},
@@ -156,6 +159,8 @@ equation
           52,-20},{110,-20}}, color={0,0,127}));
   connect(minAirFra, conVAVRoo.minFloCoo) annotation (Line(points={{-120,-50},{
           -88,-50},{-88,-78},{-82,-78}}, color={0,0,127}));
+  connect(returnAir, temperature.port) annotation (Line(points={{-100,-80},{-100,
+          -126},{-94,-126},{-94,-154},{-108,-154},{-108,-150}}, color={0,127,255}));
   annotation (Icon(                                             graphics={
                                 Rectangle(
         extent={{-100,-100},{100,100}},

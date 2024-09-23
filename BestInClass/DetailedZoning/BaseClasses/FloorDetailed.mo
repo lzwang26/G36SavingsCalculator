@@ -312,6 +312,9 @@ model FloorDetailed "Model of a floor of the building with detailed zoning"
   Modelica.Blocks.Interfaces.RealInput qGaiFlo[3,21](unit="W/m2")
     "Internal heat gains" annotation (Placement(transformation(extent={{-412,44},
             {-380,76}}), iconTransformation(extent={{-120,40},{-100,60}})));
+  Modelica.Fluid.Sensors.Temperature temperature(redeclare final package
+      Medium = MediumA)
+    annotation (Placement(transformation(extent={{-348,-122},{-328,-102}})));
 equation
 
   connect(min.y, TRooMin)   annotation (Line(points={{521,-108},{550,-108}}, color={0,0,127}));
@@ -560,73 +563,74 @@ equation
       pattern=LinePattern.Dot));
 
   connect(zoneVAV1.TAir, min.u[1]) annotation (
-          Line(points={{-319,13},{-314,13},{-314,-110},{498,-110},{498,-109.905}},
+          Line(points={{-319,13},{-314,13},{-314,-110},{498,-110},{498,-108.952}},
           color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV2.TAir, min.u[2]) annotation (
-      Line(points={{-279,13},{-276,13},{-276,-110},{498,-110},{498,-109.714}},
+      Line(points={{-279,13},{-276,13},{-276,-110},{498,-110},{498,-108.857}},
                                                   color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV3.TAir, min.u[3]) annotation (Line(points={{-239,13},{-232,13},
-          {-232,-109.524},{498,-109.524}}, color={0,0,127},
+          {-232,-108.762},{498,-108.762}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV4.TAir, min.u[4]) annotation (Line(points={{-199,13},{-194,13},
-          {-194,-109.333},{498,-109.333}}, color={0,0,127},
+          {-194,-108.667},{498,-108.667}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV5.TAir, min.u[5]) annotation (Line(points={{-159,13},{-152,13},
-          {-152,-109.143},{498,-109.143}}, color={0,0,127},
+          {-152,-108.571},{498,-108.571}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV6.TAir, min.u[6]) annotation (Line(points={{-119,13},{-112,13},
-          {-112,-108.952},{498,-108.952}}, color={0,0,127},
+          {-112,-108.476},{498,-108.476}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV7.TAir, min.u[7]) annotation (Line(points={{-79,13},{-72,13},{
-          -72,-108.762},{498,-108.762}},
+          -72,-108.381},{498,-108.381}},
                                      color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV8.TAir, min.u[8]) annotation (Line(points={{-39,13},{-32,13},{
-          -32,-108.571},{498,-108.571}},
+          -32,-108.286},{498,-108.286}},
                                      color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV9.TAir, min.u[9]) annotation (Line(points={{1,13},{8,13},{8,
-          -108.381},{498,-108.381}},
+          -108.19},{498,-108.19}},
                            color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV10.TAir, min.u[10]) annotation (Line(points={{41,13},{48,13},{
-          48,-108},{498,-108},{498,-108.19}},
+          48,-108},{498,-108},{498,-108.095}},
                                            color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV11.TAir, min.u[11]) annotation (Line(points={{81,13},{88,13},{88,
           -108},{498,-108}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV12.TAir, min.u[12]) annotation (Line(points={{121,13},{126,13},
-          {126,-107.81},{498,-107.81}}, color={0,0,127},
+          {126,-107.905},{498,-107.905}},
+                                        color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV13.TAir, min.u[13]) annotation (Line(points={{161,13},{166,13},
-          {166,-107.619},{498,-107.619}}, color={0,0,127},
+          {166,-107.81},{498,-107.81}},   color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV14.TAir, min.u[14]) annotation (Line(points={{201,13},{208,13},
-          {208,-107.429},{498,-107.429}}, color={0,0,127},
+          {208,-107.714},{498,-107.714}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV15.TAir, min.u[15]) annotation (Line(points={{241,13},{248,13},
-          {248,-108},{498,-108},{498,-107.238}}, color={0,0,127},
+          {248,-108},{498,-108},{498,-107.619}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV16.TAir, min.u[16]) annotation (Line(points={{281,13},{286,13},
-          {286,-107.048},{498,-107.048}}, color={0,0,127},
+          {286,-107.524},{498,-107.524}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV17.TAir, min.u[17]) annotation (Line(points={{321,13},{324,13},
-          {324,-106.857},{498,-106.857}}, color={0,0,127},
+          {324,-107.429},{498,-107.429}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV18.TAir, min.u[18]) annotation (Line(points={{361,13},{366,13},
-          {366,-106.667},{498,-106.667}}, color={0,0,127},
+          {366,-107.333},{498,-107.333}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV19.TAir, min.u[19]) annotation (Line(points={{401,13},{408,13},
-          {408,-106.476},{498,-106.476}}, color={0,0,127},
+          {408,-107.238},{498,-107.238}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV20.TAir, min.u[20]) annotation (Line(points={{441,13},{446,13},
-          {446,-106.286},{498,-106.286}}, color={0,0,127},
+          {446,-107.143},{498,-107.143}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV21.TAir, min.u[21]) annotation (Line(points={{481,13},{486,13},
-          {486,-106},{498,-106},{498,-106.095}}, color={0,0,127},
+          {486,-106},{498,-106},{498,-107.048}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV1.returnAir1, zoneVAV2.supplyAir1)
     annotation (Line(points={{-320,18},{-300,18}}, color={0,127,255}));
@@ -709,152 +713,154 @@ equation
   connect(zoneVAV20.supplyAir, zoneVAV21.returnAir)
     annotation (Line(points={{440,2},{460,2}}, color={0,127,255}));
   connect(zoneVAV1.TAir, ave.u[1]) annotation (Line(points={{-319,13},{-314,13},
-          {-314,-79.9048},{498,-79.9048}}, color={0,0,127},
+          {-314,-78.9524},{498,-78.9524}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV2.TAir, ave.u[2]) annotation (Line(points={{-279,13},{-276,13},
-          {-276,-79.7143},{498,-79.7143}}, color={0,0,127},
+          {-276,-78.8571},{498,-78.8571}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV3.TAir, ave.u[3]) annotation (Line(points={{-239,13},{-232,13},
-          {-232,-79.5238},{498,-79.5238}}, color={0,0,127},
+          {-232,-78.7619},{498,-78.7619}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV4.TAir, ave.u[4]) annotation (Line(points={{-199,13},{-194,13},
-          {-194,-79.3333},{498,-79.3333}}, color={0,0,127},
+          {-194,-78.6667},{498,-78.6667}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV5.TAir, ave.u[5]) annotation (Line(points={{-159,13},{-152,13},
-          {-152,-79.1429},{498,-79.1429}}, color={0,0,127},
+          {-152,-78.5714},{498,-78.5714}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV6.TAir, ave.u[6]) annotation (Line(points={{-119,13},{-112,13},
-          {-112,-78.9524},{498,-78.9524}}, color={0,0,127},
+          {-112,-78.4762},{498,-78.4762}}, color={0,0,127},
       pattern=LinePattern.Dot));
-  connect(zoneVAV7.TAir, ave.u[7]) annotation (Line(points={{-79,13},{-72,13},{-72,
-          -78.7619},{498,-78.7619}}, color={0,0,127},
+  connect(zoneVAV7.TAir, ave.u[7]) annotation (Line(points={{-79,13},{-72,13},{
+          -72,-78.381},{498,-78.381}},
+                                     color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV8.TAir, ave.u[8]) annotation (Line(points={{-39,13},{-32,13},{
-          -32,-78},{498,-78},{498,-78.5714}},
+          -32,-78},{498,-78},{498,-78.2857}},
                                           color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV9.TAir, ave.u[9]) annotation (Line(points={{1,13},{8,13},{8,
-          -78.381},{498,-78.381}},
+          -78.1905},{498,-78.1905}},
                           color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV10.TAir, ave.u[10]) annotation (Line(points={{41,13},{48,13},{
-          48,-78.1905},{498,-78.1905}},
+          48,-78.0952},{498,-78.0952}},
                                      color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV11.TAir, ave.u[11]) annotation (Line(points={{81,13},{88,13},{88,
           -78},{498,-78}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV12.TAir, ave.u[12]) annotation (Line(points={{121,13},{126,13},
-          {126,-77.8095},{498,-77.8095}}, color={0,0,127},
+          {126,-77.9048},{498,-77.9048}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV13.TAir, ave.u[13]) annotation (Line(points={{161,13},{166,13},
-          {166,-77.619},{498,-77.619}}, color={0,0,127},
+          {166,-77.8095},{498,-77.8095}},
+                                        color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV14.TAir, ave.u[14]) annotation (Line(points={{201,13},{208,13},
-          {208,-77.4286},{498,-77.4286}}, color={0,0,127},
+          {208,-77.7143},{498,-77.7143}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV15.TAir, ave.u[15]) annotation (Line(points={{241,13},{248,13},
-          {248,-77.2381},{498,-77.2381}}, color={0,0,127},
+          {248,-77.619},{498,-77.619}},   color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV16.TAir, ave.u[16]) annotation (Line(points={{281,13},{286,13},
-          {286,-77.0476},{498,-77.0476}}, color={0,0,127},
+          {286,-77.5238},{498,-77.5238}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV17.TAir, ave.u[17]) annotation (Line(points={{321,13},{324,13},
-          {324,-76.8571},{498,-76.8571}}, color={0,0,127},
+          {324,-77.4286},{498,-77.4286}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV18.TAir, ave.u[18]) annotation (Line(points={{361,13},{366,13},
-          {366,-76.6667},{498,-76.6667}}, color={0,0,127},
+          {366,-77.3333},{498,-77.3333}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV19.TAir, ave.u[19]) annotation (Line(points={{401,13},{408,13},
-          {408,-76.4762},{498,-76.4762}}, color={0,0,127},
+          {408,-77.2381},{498,-77.2381}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV20.TAir, ave.u[20]) annotation (Line(points={{441,13},{446,13},
-          {446,-76.2857},{498,-76.2857}}, color={0,0,127},
+          {446,-77.1429},{498,-77.1429}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV21.TAir, ave.u[21]) annotation (Line(points={{481,13},{486,13},
-          {486,-76.0952},{498,-76.0952}}, color={0,0,127},
+          {486,-77.0476},{498,-77.0476}}, color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV1.yVavAct, max.u[1]) annotation (Line(points={{-319,7},{-312,7},
-          {-312,54},{448,54},{448,52.0952},{498,52.0952}},
+          {-312,54},{448,54},{448,53.0476},{498,53.0476}},
                                          color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV2.yVavAct, max.u[2]) annotation (Line(points={{-279,7},{-274,7},
-          {-274,54},{450,54},{450,52.2857},{498,52.2857}},
+          {-274,54},{450,54},{450,53.1429},{498,53.1429}},
                                          color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV3.yVavAct, max.u[3]) annotation (Line(points={{-239,7},{-228,7},
-          {-228,54},{496,54},{496,52.4762},{498,52.4762}},
+          {-228,54},{496,54},{496,53.2381},{498,53.2381}},
                                          color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV4.yVavAct, max.u[4]) annotation (Line(points={{-199,7},{-192,7},
-          {-192,54},{498,54},{498,52.6667}},
+          {-192,54},{498,54},{498,53.3333}},
                                          color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV5.yVavAct, max.u[5]) annotation (Line(points={{-159,7},{-156,7},
-          {-156,54},{418,54},{418,52.8571},{498,52.8571}},
+          {-156,54},{418,54},{418,53.4286},{498,53.4286}},
                                          color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV6.yVavAct, max.u[6]) annotation (Line(points={{-119,7},{-114,7},
-          {-114,54},{496,54},{496,53.0476},{498,53.0476}},
+          {-114,54},{496,54},{496,53.5238},{498,53.5238}},
                                          color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV7.yVavAct, max.u[7]) annotation (Line(points={{-79,7},{-74,7},
-          {-74,54},{428,54},{428,53.2381},{498,53.2381}},
+          {-74,54},{428,54},{428,53.619},{498,53.619}},
                                        color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV8.yVavAct, max.u[8]) annotation (Line(points={{-39,7},{-34,7},
-          {-34,54},{432,54},{432,53.4286},{498,53.4286}},
+          {-34,54},{432,54},{432,53.7143},{498,53.7143}},
                                        color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV9.yVavAct, max.u[9]) annotation (Line(points={{1,7},{6,7},{6,
-          54},{376,54},{376,53.619},{498,53.619}},
+          54},{376,54},{376,53.8095},{498,53.8095}},
                          color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV10.yVavAct, max.u[10]) annotation (Line(points={{41,7},{46,7},
-          {46,54},{386,54},{386,53.8095},{498,53.8095}},
+          {46,54},{386,54},{386,53.9048},{498,53.9048}},
                                       color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV11.yVavAct, max.u[11]) annotation (Line(points={{81,7},{86,7},
           {86,54},{498,54}},color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV12.yVavAct, max.u[12]) annotation (Line(points={{121,7},{128,7},
-          {128,54},{406,54},{406,54.1905},{498,54.1905}},
+          {128,54},{406,54},{406,54.0952},{498,54.0952}},
                                         color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV13.yVavAct, max.u[13]) annotation (Line(points={{161,7},{168,7},
-          {168,54},{334,54},{334,54.381},{498,54.381}},
+          {168,54},{334,54},{334,54.1905},{498,54.1905}},
                                       color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV14.yVavAct, max.u[14]) annotation (Line(points={{201,7},{206,7},
-          {206,54},{352,54},{352,54.5714},{498,54.5714}},
+          {206,54},{352,54},{352,54.2857},{498,54.2857}},
                                         color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV15.yVavAct, max.u[15]) annotation (Line(points={{241,7},{244,7},
-          {244,54},{436,54},{436,54.7619},{498,54.7619}},
+          {244,54},{436,54},{436,54.381},{498,54.381}},
                                         color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV16.yVavAct, max.u[16]) annotation (Line(points={{281,7},{288,7},
-          {288,54},{446,54},{446,54.9524},{498,54.9524}},
+          {288,54},{446,54},{446,54.4762},{498,54.4762}},
                                         color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV17.yVavAct, max.u[17]) annotation (Line(
-      points={{321,7},{326,7},{326,54},{412,54},{412,55.1429},{498,55.1429}},
+      points={{321,7},{326,7},{326,54},{412,54},{412,54.5714},{498,54.5714}},
       color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV18.yVavAct, max.u[18]) annotation (Line(
-      points={{361,7},{368,7},{368,54},{498,54},{498,55.3333}},
+      points={{361,7},{368,7},{368,54},{498,54},{498,54.6667}},
       color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV19.yVavAct, max.u[19]) annotation (Line(
-      points={{401,7},{406,7},{406,54},{488,54},{488,55.5238},{498,55.5238}},
+      points={{401,7},{406,7},{406,54},{488,54},{488,54.7619},{498,54.7619}},
       color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV20.yVavAct, max.u[20]) annotation (Line(
-      points={{441,7},{448,7},{448,54},{496,54},{496,55.7143},{498,55.7143}},
+      points={{441,7},{448,7},{448,54},{496,54},{496,54.8571},{498,54.8571}},
       color={0,0,127},
       pattern=LinePattern.Dot));
   connect(zoneVAV21.yVavAct, max.u[21]) annotation (Line(
-      points={{481,7},{490,7},{490,56},{498,56},{498,55.9048}},
+      points={{481,7},{490,7},{490,56},{498,56},{498,54.9524}},
       color={0,0,127},
       pattern=LinePattern.Dot));
   connect(supplyAir, zoneVAV1.supplyAir1) annotation (Line(points={{-380,80},{
@@ -905,6 +911,8 @@ equation
           60},{456,60},{456,15},{459,15}}, color={0,0,127}));
   connect(max.y, yVAVMax) annotation (Line(points={{521,54},{526,54},{526,60},{
           550,60}}, color={0,0,127}));
+  connect(returnAir, temperature.port) annotation (Line(points={{-380,-120},{-354,
+          -120},{-354,-128},{-338,-128},{-338,-122}}, color={0,127,255}));
   annotation (
   defaultComponentName="Building",
   Diagram(coordinateSystem(preserveAspectRatio=true, extent={{-380,-140},
