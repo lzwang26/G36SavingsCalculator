@@ -165,10 +165,6 @@ equation
       points={{18,168},{-80,168},{-80,100},{-120,100}},
       color={0,0,127},
       smooth=Smooth.None));
-  connect(yOATMix.TMixSet, TSetMix.TSet) annotation (Line(
-      points={{18,164},{6,164},{6,75},{1,75}},
-      color={0,0,127},
-      smooth=Smooth.None));
   connect(yOATMix.yOA, max.u1) annotation (Line(
       points={{41,170},{74,170},{74,6},{78,6}},
       color={0,0,127},
@@ -193,6 +189,8 @@ equation
     annotation (Line(points={{-53,130},{18,130}}, color={0,0,127}));
   connect(TMix, yOATFre.u_m)
     annotation (Line(points={{-120,100},{30,100},{30,118}}, color={0,0,127}));
+  connect(TSetMix.TSet, yOATMix.TMixSet) annotation (Line(points={{1,75},{6,75},
+          {6,164},{18,164}}, color={0,0,127}));
   annotation (
     Diagram(coordinateSystem(preserveAspectRatio=true, extent={{-100,-100},{200,
             200}})),

@@ -1,5 +1,5 @@
 within BestInClass.DetailedZoning.BaseClasses;
-partial model PartialOpenLoop
+partial model PartialOpenLoop_Sacra
 
   parameter Real yFanMin = 0.1
     "Minimum fan speed";
@@ -106,8 +106,8 @@ partial model PartialOpenLoop
     annotation (Placement(transformation(extent={{-80,70},{-60,90}})));
 
   Parameters par(
-    idfFile="modelica://BestInClass/Resources/idf/MediumOfficeDetailed_2004_la.idf",
-    weaFile="modelica://BestInClass/Resources/weather/USA_CA_Los.Angeles.Intl.AP.722950_TMY3.mos",
+    idfFile="modelica://BestInClass/Resources/idf/MediumOfficeDetailed_2004_sacramento.idf",
+    weaFile="modelica://BestInClass/Resources/weather/USA_CA_Sacramento.Metro.AP.724839_TMY3.mos",
     peoFile="modelica://BestInClass/Resources/intGai/people_low.dat",
     ligFile="modelica://BestInClass/Resources/intGai/lights_low.dat",
     equFile="modelica://BestInClass/Resources/intGai/equipment_low.dat",
@@ -362,4 +362,4 @@ equation
       StartTime=18403200,
       StopTime=19612800,
       __Dymola_Algorithm="Dassl"));
-end PartialOpenLoop;
+end PartialOpenLoop_Sacra;

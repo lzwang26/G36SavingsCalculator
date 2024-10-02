@@ -1,7 +1,7 @@
 within BestInClass.DetailedZoning;
-model BICBase
+model BICBase_Sacra
   extends Modelica.Icons.Example;
-  extends BaseClasses.PartialOpenLoop(par(minAirFra=0.3), occupancy(period(
+  extends BaseClasses.PartialOpenLoop_Sacra(par(minAirFra=0.3), occupancy(period(
           displayUnit="s")));
 
   Buildings.Controls.OBC.CDL.Continuous.Sources.Constant pSetDuc(k=par.pSetCon)
@@ -34,9 +34,9 @@ equation
                     graphics={
         Line(points={{-142,48}}, color={28,108,200})}),
     experiment(
-      StartTime=432000,
-      StopTime=691200,
+      StartTime=16329600,
+      StopTime=16502400,
       Interval=599.999616,
       __Dymola_Algorithm="Cvode"),
     __Dymola_Commands(file="modelica://BestInClass/DetailedZoning/BaseModelError.mos" "BaseModelError"));
-end BICBase;
+end BICBase_Sacra;
