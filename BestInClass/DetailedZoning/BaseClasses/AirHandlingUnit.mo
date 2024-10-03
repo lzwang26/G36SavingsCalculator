@@ -178,7 +178,7 @@ public
     yMax=1,
     yMin=0,
     controllerType=Modelica.Blocks.Types.SimpleController.PI,
-    Ti=600,
+    Ti=200,
     k=0.1,
     reverseActing=not (true)) "Controller for cooling coil"
     annotation (Placement(transformation(extent={{6,-170},{26,-150}})));
@@ -255,8 +255,8 @@ public
     m_flow_nominal=m_flow_nominal,
     allowFlowReversal=allowFlowReversal)
     annotation (Placement(transformation(extent={{368,52},{388,72}})));
-  Buildings.Fluid.Sensors.RelativePressure dpDisSupFan(redeclare package Medium =
-        MediumA) "Supply fan static discharge pressure" annotation (Placement(
+  Buildings.Fluid.Sensors.RelativePressure dpDisSupFan(redeclare package Medium
+      = MediumA) "Supply fan static discharge pressure" annotation (Placement(
         transformation(
         extent={{-10,10},{10,-10}},
         rotation=90,
@@ -281,7 +281,7 @@ public
     annotation (Placement(transformation(extent={{120,-232},{140,-212}})));
 equation
   connect(amb.ports[1],VOut1. port_a) annotation (Line(
-      points={{-28,59.9333},{-8,59.9333},{-8,69},{14,69}},
+      points={{-28,55.5333},{-8,55.5333},{-8,69},{14,69}},
       color={0,127,255},
       smooth=Smooth.None,
       thickness=0.5));
@@ -513,7 +513,7 @@ equation
     annotation (Line(points={{388,62},{420,62}}, color={0,127,255}));
   connect(senSupFlo.port_b, supplyAir)   annotation (Line(points={{440,62},{482,62}}, color={0,127,255}));
   connect(dpDisSupFan.port_b, amb.ports[3]) annotation (Line(points={{358,112},
-          {358,118},{-14,118},{-14,54.0667},{-28,54.0667}},color={0,127,255}));
+          {358,118},{-14,118},{-14,58.4667},{-28,58.4667}},color={0,127,255}));
   connect(modeSelector.yFan, fanOn) annotation (Line(points={{-93.0909,-203.455},
           {436,-203.455},{436,-220},{490,-220}},
                                             color={255,0,255}));
