@@ -1,5 +1,5 @@
 within BestInClass.DetailedZoning;
-model BICBase
+model BICBase_LA
   extends Modelica.Icons.Example;
   extends BaseClasses.PartialOpenLoop(par(minAirFra=0.3), occupancy(period(
           displayUnit="s")),
@@ -50,4 +50,4 @@ equation
       file=
           "modelica://BestInClass/Resources/Script/DetailedZoning/LA_Winter.mos"
         "LA_Winter"));
-end BICBase;
+end BICBase_LA;

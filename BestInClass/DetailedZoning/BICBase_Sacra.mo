@@ -1,7 +1,12 @@
 within BestInClass.DetailedZoning;
 model BICBase_Sacra
   extends Modelica.Icons.Example;
-  extends BaseClasses.PartialOpenLoop_Sacra(par(minAirFra=0.3), occupancy(period(
+  extends BaseClasses.PartialOpenLoop(par(
+      idfFile=
+          "modelica://BestInClass/Resources/idf/MediumOfficeDetailed_2004_sacramento.idf",
+      weaFile=
+          "modelica://BestInClass/Resources/weather/USA_CA_Sacramento.Metro.AP.724839_TMY3.mos",
+                                          minAirFra=0.3), occupancy(period(
           displayUnit="s")));
 
   Buildings.Controls.OBC.CDL.Continuous.Sources.Constant pSetDuc(k=par.pSetCon)
