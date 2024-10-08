@@ -1,0 +1,34 @@
+﻿Advanced.CompileWith64 = 2;
+simulateModel(
+  "BestInClass.DetailedZoning.BICBase",
+  startTime=20476800,
+  stopTime=20649600,
+  numberOfIntervals=0,
+  outputInterval=600,
+  method="Cvode",
+  tolerance=1e-06,
+  resultFile="BICBase");
+createPlot(id=1, position={0, 0, 1615, 694}, y={"Building.TRooCooSet", "Building.TRooHeaSet", "Building.zoneVAV2.zon.TAir", 
+"Building.zoneVAV3.zon.TAir", "Building.zoneVAV4.zon.TAir", "Building.zoneVAV5.zon.TAir",
+ "Building.zoneVAV6.zon.TAir", "Building.zoneVAV7.zon.TAir", "Building.zoneVAV8.zon.TAir",
+ "Building.zoneVAV1.zon.TAir", "Building.building.weaBus.TDryBul", 
+"Building.zoneVAV9.zon.TAir", "Building.zoneVAV10.zon.TAir", "Building.zoneVAV11.zon.TAir",
+ "Building.zoneVAV12.zon.TAir", "Building.zoneVAV13.zon.TAir", 
+"Building.zoneVAV14.zon.TAir", "Building.zoneVAV15.zon.TAir", "Building.zoneVAV16.zon.TAir",
+ "Building.zoneVAV17.zon.TAir", "Building.zoneVAV18.zon.TAir", 
+"Building.zoneVAV19.zon.TAir", "Building.zoneVAV20.zon.TAir", "Building.zoneVAV21.zon.TAir"}, range={237.0, 239.0, 10.0, 35.0}, grid=true, subPlot=101, colors={{28,108,200}, {238,46,47}, {0,140,72}, {217,67,180}, {0,0,0}, {162,29,33}, 
+{244,125,35}, {102,44,145}, {28,108,200}, {238,46,47}, {102,44,145}, 
+{0,140,72}, {0,0,0}, {162,29,33}, {244,125,35}, {102,44,145}, {28,108,200}, 
+{238,46,47}, {0,140,72}, {217,67,180}, {0,0,0}, {162,29,33}, {244,125,35}, 
+{102,44,145}}, patterns={LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, 
+LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, 
+LinePattern.Dash, LinePattern.Dash, LinePattern.DashDotDot, LinePattern.Dash, 
+LinePattern.Dash, LinePattern.Dash, LinePattern.Dash, LinePattern.Dash, 
+LinePattern.Dot, LinePattern.Dot, LinePattern.Dot, LinePattern.Dot, 
+LinePattern.Dot, LinePattern.Dot, LinePattern.Dot, LinePattern.Dot}, thicknesses={0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.5, 0.25, 0.25, 
+0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25}, timeUnit="d", displayUnits={"degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC",
+ "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", 
+"degC", "degC", "degC", "degC", "degC"});
+createPlot(id=1, position={0, 0, 1615, 694}, y={"AHU.heaCoi.Q1_flow", "AHU.cooCoi.Q1_flow"}, range={237.0, 239.0, -20000.0, 80000.0}, grid=true, subPlot=102, colors={{28,108,200}, {0,140,72}}, timeUnit="d", displayUnits={"W", "W"});
+plotExpression(apply(BICBase[end].Building.zoneVAV1.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV2.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV3.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV4.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV5.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV6.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV7.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV8.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV9.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV10.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV11.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV12.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV13.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV14.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV15.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV16.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV17.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV18.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV19.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV20.VAVbox.terHea.Q1_flow+BICBase[end].Building.zoneVAV21.VAVbox.terHea.Q1_flow), false, "Terminal reheat [W]", 1);
+createPlot(id=1, position={0, 0, 1615, 694}, y={"AHU.fanSup.P"}, range={237.0, 239.0, -500.0, 3500.0}, grid=true, subPlot=103, colors={{28,108,200}}, timeUnit="d", displayUnits={"W"});

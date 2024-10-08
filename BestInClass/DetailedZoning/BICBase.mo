@@ -35,11 +35,19 @@ equation
                     graphics={
         Line(points={{-142,48}}, color={28,108,200})}),
     experiment(
-      StartTime=432000,
+      StartTime=518400,
       StopTime=691200,
       Interval=599.999616,
+      Tolerance=1e-06,
       __Dymola_Algorithm="Cvode"),
-    __Dymola_Commands(file="modelica://BestInClass/DetailedZoning/BaseModelError.mos" "BaseModelError",
-    file="modelica://BestInClass/DetailedZoning/LA_Summer.mos" "LA_Summer",
-    file="modelica://BestInClass/DetailedZoning/LA_Winter.mos" "LA_Winter"));
+    __Dymola_Commands(
+      file=
+          "modelica://BestInClass/Resources/Script/DetailedZoning/BaseModelError.mos"
+        "BaseModelError",
+      file=
+          "modelica://BestInClass/Resources/Script/DetailedZoning/LA_Summer.mos"
+        "LA_Summer",
+      file=
+          "modelica://BestInClass/Resources/Script/DetailedZoning/LA_Winter.mos"
+        "LA_Winter"));
 end BICBase;

@@ -1,8 +1,0 @@
-﻿simulateModel(
-  "BestInClass.DetailedZoning.BICBase",
-  startTime=20390400,
-  stopTime=20649600,
-  numberOfIntervals=0,
-  outputInterval=599.999616,
-  method="Cvode",
-  resultFile="BICBase");
