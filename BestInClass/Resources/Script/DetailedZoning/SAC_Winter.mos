@@ -1,12 +1,12 @@
 ﻿simulateModel(
-  "BestInClass.DetailedZoning.BICBase_LA",
+  "BestInClass.DetailedZoning.BICBase_Sacra",
   startTime=518400,
   stopTime=691200,
   numberOfIntervals=0,
   outputInterval=600,
   method="Cvode",
   tolerance=1e-06,
-  resultFile="BICBase_LA");
+  resultFile="BICBase_Sacra");
 createPlot(id=1, position={0, 0, 1615, 576}, y={"Building.TRooCooSet", "Building.TRooHeaSet", "Building.zoneVAV2.zon.TAir", 
 "Building.zoneVAV3.zon.TAir", "Building.zoneVAV4.zon.TAir", "Building.zoneVAV5.zon.TAir",
  "Building.zoneVAV6.zon.TAir", "Building.zoneVAV7.zon.TAir", "Building.zoneVAV8.zon.TAir",
@@ -29,6 +29,6 @@ LinePattern.Dot, LinePattern.Dot, LinePattern.Dot, LinePattern.Dot}, thicknesses
  "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", 
 "degC", "degC", "degC", "degC", "degC"});
 createPlot(id=1, position={0, 0, 1615, 576}, y={"AHU.heaCoi.Q2_flow", "AHU.cooCoi.Q1_flow"}, range={6.0, 8.0, -5000.0, 15000.0}, grid=true, subPlot=102, colors={{28,108,200}, {0,140,72}}, timeUnit="d", displayUnits={"W", "W"});
-plotExpression(apply(BICBase_LA[end].Building.zoneVAV1.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV2.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV3.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV4.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV5.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV6.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV7.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV8.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV9.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV10.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV11.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV12.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV13.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV14.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV15.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV16.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV17.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV18.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV19.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV20.VAVbox.terHea.Q1_flow+BICBase_LA[end].Building.zoneVAV21.VAVbox.terHea.Q1_flow), false, "Terminal reheat [W]", 1);
+plotExpression(apply(BICBase_Sacra[end].Building.zoneVAV1.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV2.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV3.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV4.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV5.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV6.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV7.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV8.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV9.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV10.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV11.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV12.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV13.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV14.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV15.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV16.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV17.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV18.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV19.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV20.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV21.VAVbox.terHea.Q1_flow), false, "Terminal reheat [W]", 1);
 createPlot(id=1, position={0, 0, 1615, 576}, y={"AHU.fanSup.P"}, range={6.0, 8.0, -500.0, 2500.0}, grid=true, subPlot=103, colors={{28,108,200}}, timeUnit="d", displayUnits={"W"});
 

@@ -3,7 +3,7 @@ model BICBase_LA
   extends Modelica.Icons.Example;
   extends BaseClasses.PartialOpenLoop(par(minAirFra=0.3), occupancy(period(
           displayUnit="s")),
-    AHU(cooCoiCon(P(k=1))));
+    AHU(cooCoiCon(P(k=1)), TSupSetHea(k=273.15 + 12.8)));
 
   Buildings.Controls.OBC.CDL.Continuous.Sources.Constant pSetDuc(k=par.pSetCon)
     "Duct static pressure setpoint"
@@ -40,14 +40,9 @@ equation
       Interval=599.999616,
       Tolerance=1e-06,
       __Dymola_Algorithm="Cvode"),
-    __Dymola_Commands(
-      file=
-          "modelica://BestInClass/Resources/Script/DetailedZoning/BaseModelError.mos"
-        "BaseModelError",
-      file=
+    __Dymola_Commands(file=
           "modelica://BestInClass/Resources/Script/DetailedZoning/LA_Summer.mos"
-        "LA_Summer",
-      file=
+        "LA_Summer", file=
           "modelica://BestInClass/Resources/Script/DetailedZoning/LA_Winter.mos"
         "LA_Winter"));
 end BICBase_LA;

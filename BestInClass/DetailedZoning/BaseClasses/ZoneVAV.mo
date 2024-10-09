@@ -12,7 +12,7 @@ model ZoneVAV "Base class with a zone and a VAV box"
     "= false to simplify equations, assuming, but not enforcing, no flow reversal"
     annotation (Evaluate=true);
 
-  Buildings.ThermalZones.EnergyPlus.ThermalZone zon(
+  ThermalZoneVariableCapacity                   zon(
     redeclare package Medium = MediumA,
     zoneName=zoneName,
     nPorts=2) "Thermal zone"

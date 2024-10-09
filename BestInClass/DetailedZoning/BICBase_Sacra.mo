@@ -6,8 +6,11 @@ model BICBase_Sacra
           "modelica://BestInClass/Resources/idf/MediumOfficeDetailed_2004_sacramento.idf",
       weaFile=
           "modelica://BestInClass/Resources/weather/USA_CA_Sacramento.Metro.AP.724839_TMY3.mos",
-                                          minAirFra=0.3), occupancy(period(
-          displayUnit="s")));
+      minAirFra=0.3),
+      occupancy(period(displayUnit="s")),
+    Building(zoneVAV7(zon(vol(fluidVolume=204.21*10)))),
+    Building(zoneVAV8(zon(vol(fluidVolume=204.21*10)))),
+    AHU(TSupSetHea(k=273.15 + 10)));
 
   Buildings.Controls.OBC.CDL.Continuous.Sources.Constant pSetDuc(k=par.pSetCon)
     "Duct static pressure setpoint"
@@ -43,5 +46,9 @@ equation
       StopTime=16502400,
       Interval=599.999616,
       __Dymola_Algorithm="Cvode"),
-    __Dymola_Commands(file="modelica://BestInClass/DetailedZoning/BaseModelError.mos" "BaseModelError"));
+    __Dymola_Commands(
+    file= "modelica://BestInClass/Resources/Script/DetailedZoning/SAC_Summer.mos"
+        "SAC_Summer",
+    file= "modelica://BestInClass/Resources/Script/DetailedZoning/SAC_Winter.mos"
+        "SAC_Winter"));
 end BICBase_Sacra;
