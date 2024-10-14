@@ -10,7 +10,13 @@ model BICBase_Sacra
       occupancy(period(displayUnit="s")),
     Building(zoneVAV7(zon(vol(fluidVolume=204.21*10)))),
     Building(zoneVAV8(zon(vol(fluidVolume=204.21*10)))),
-    AHU(TSupSetHea(k=273.15 + 10)));
+    AHU(TSupSetHea(k=273.15 + 10)),
+    internalGains(
+      kLig=0,
+      kEqu=0,
+      gaiRadPeo(k=0),
+      gaiConPeo(k=0),
+      gaiLatPeo(k=0)));
 
   Buildings.Controls.OBC.CDL.Continuous.Sources.Constant pSetDuc(k=par.pSetCon)
     "Duct static pressure setpoint"
