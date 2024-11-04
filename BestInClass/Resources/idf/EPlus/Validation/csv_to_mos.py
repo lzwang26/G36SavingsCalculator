@@ -45,7 +45,7 @@ def main():
     output_list = output_list,
     dat_file_name=dat_fil,
     start_time=16329600,
-    step_size=600,
+    step_size=60,
     final_time=16761600)
 
 if __name__ == '__main__':
