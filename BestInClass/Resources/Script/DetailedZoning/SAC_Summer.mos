@@ -2,33 +2,53 @@
 simulateModel(
   "BestInClass.DetailedZoning.BICBase_Sacra",
   startTime=16329600,
-  stopTime=16502400,
+  stopTime=16761600,
   numberOfIntervals=0,
   outputInterval=600,
   method="Cvode",
   resultFile="BICBase_Sacra");  
 
-createPlot(id=1, position={0, 0, 1615, 694}, y={"Building.TRooCooSet", "Building.TRooHeaSet", "Building.zoneVAV2.zon.TAir", 
+createPlot(id=1, position={10, 21, 600, 400}, y={"Building.TRooCooSet", "Building.TRooHeaSet", "Building.zoneVAV2.zon.TAir", 
 "Building.zoneVAV3.zon.TAir", "Building.zoneVAV4.zon.TAir", "Building.zoneVAV5.zon.TAir",
  "Building.zoneVAV6.zon.TAir", "Building.zoneVAV7.zon.TAir", "Building.zoneVAV8.zon.TAir",
- "Building.zoneVAV1.zon.TAir", "Building.building.weaBus.TDryBul", 
-"Building.zoneVAV9.zon.TAir", "Building.zoneVAV10.zon.TAir", "Building.zoneVAV11.zon.TAir",
- "Building.zoneVAV12.zon.TAir", "Building.zoneVAV13.zon.TAir", 
-"Building.zoneVAV14.zon.TAir", "Building.zoneVAV15.zon.TAir", "Building.zoneVAV16.zon.TAir",
- "Building.zoneVAV17.zon.TAir", "Building.zoneVAV18.zon.TAir", 
-"Building.zoneVAV19.zon.TAir", "Building.zoneVAV20.zon.TAir", "Building.zoneVAV21.zon.TAir"}, range={237.0, 239.0, 10.0, 35.0}, grid=true, subPlot=101, colors={{28,108,200}, {238,46,47}, {0,140,72}, {217,67,180}, {0,0,0}, {162,29,33}, 
-{244,125,35}, {102,44,145}, {28,108,200}, {238,46,47}, {102,44,145}, 
-{0,140,72}, {0,0,0}, {162,29,33}, {244,125,35}, {102,44,145}, {28,108,200}, 
-{238,46,47}, {0,140,72}, {217,67,180}, {0,0,0}, {162,29,33}, {244,125,35}, 
-{102,44,145}}, patterns={LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, 
+ "Building.zoneVAV1.zon.TAir", "Building.zoneVAV9.zon.TAir", "Building.zoneVAV10.zon.TAir",
+ "Building.zoneVAV11.zon.TAir", "Building.zoneVAV12.zon.TAir", 
+"Building.zoneVAV13.zon.TAir", "Building.zoneVAV14.zon.TAir", "Building.zoneVAV15.zon.TAir",
+ "Building.zoneVAV16.zon.TAir", "Building.zoneVAV17.zon.TAir", 
+"Building.zoneVAV18.zon.TAir", "Building.zoneVAV19.zon.TAir", "Building.zoneVAV20.zon.TAir",
+ "Building.zoneVAV21.zon.TAir"}, range={189.0, 194.0, 10.0, 35.0}, grid=true, subPlot=101, colors={{28,108,200}, {238,46,47}, {0,140,72}, {217,67,180}, {0,0,0}, {162,29,33}, 
+{244,125,35}, {102,44,145}, {28,108,200}, {238,46,47}, {0,140,72}, {0,0,0}, 
+{162,29,33}, {244,125,35}, {102,44,145}, {28,108,200}, {238,46,47}, {0,140,72},
+ {217,67,180}, {0,0,0}, {162,29,33}, {244,125,35}, {102,44,145}}, patterns={LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, 
 LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, 
-LinePattern.Dash, LinePattern.Dash, LinePattern.DashDotDot, LinePattern.Dash, 
+LinePattern.Dash, LinePattern.Dash, LinePattern.Dash, LinePattern.Dash, 
+LinePattern.Dash, LinePattern.Dash, LinePattern.Dash, LinePattern.Dot, 
+LinePattern.Dot, LinePattern.Dot, LinePattern.Dot, LinePattern.Dot, 
+LinePattern.Dot, LinePattern.Dot, LinePattern.Dot}, timeUnit="d", displayUnits={"degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC",
+ "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", 
+"degC", "degC", "degC", "degC"});
+createPlot(id=1, position={10, 21, 600, 400}, y={"AHU.heaCoi.Q2_flow", "AHU.cooCoi.Q1_flow"}, range={189.0, 194.0, -20000.0, 80000.0}, grid=true, subPlot=103, colors={{28,108,200}, {0,140,72}}, timeUnit="d", displayUnits={"W", "W"});
+plotExpression(apply(BICBase_Sacra[end].Building.zoneVAV1.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV2.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV3.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV4.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV5.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV6.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV7.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV8.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV9.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV10.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV11.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV12.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV13.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV14.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV15.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV16.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV17.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV18.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV19.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV20.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV21.VAVbox.terHea.Q1_flow), false, "Terminal reheat [W]", 1);
+createPlot(id=1, position={10, 21, 600, 400}, y={"datRea.y[7]", "datRea.y[8]", "datRea.y[9]", "datRea.y[10]", "datRea.y[11]", 
+"datRea.y[12]", "datRea.y[14]", "datRea.y[13]", "datRea.y[15]", "datRea.y[16]",
+ "datRea.y[17]", "datRea.y[18]", "datRea.y[19]", "datRea.y[20]", 
+"datRea.y[21]", "datRea.y[22]", "datRea.y[23]", "datRea.y[24]", "datRea.y[25]",
+ "datRea.y[26]", "datRea.y[27]", "Building.TRooHeaSet", "Building.TRooCooSet",
+ "datRea.y[28]"}, range={189.0, 194.0, 10.0, 35.0}, grid=true, subPlot=102, colors={{28,108,200}, {238,46,47}, {0,140,72}, {217,67,180}, {0,0,0}, {162,29,33}, 
+{244,125,35}, {102,44,145}, {28,108,200}, {238,46,47}, {0,140,72}, 
+{217,67,180}, {0,0,0}, {162,29,33}, {244,125,35}, {102,44,145}, {28,108,200}, 
+{238,46,47}, {0,140,72}, {217,67,180}, {0,0,0}, {238,46,47}, {28,108,200}, 
+{162,29,33}}, patterns={LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, 
+LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, LinePattern.Solid, 
+LinePattern.Dash, LinePattern.Dash, LinePattern.Dash, LinePattern.Dash, 
 LinePattern.Dash, LinePattern.Dash, LinePattern.Dash, LinePattern.Dash, 
 LinePattern.Dot, LinePattern.Dot, LinePattern.Dot, LinePattern.Dot, 
-LinePattern.Dot, LinePattern.Dot, LinePattern.Dot, LinePattern.Dot}, thicknesses={0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.5, 0.25, 0.25, 
-0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25}, timeUnit="d", displayUnits={"degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC",
- "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", "degC", 
-"degC", "degC", "degC", "degC", "degC"});
-createPlot(id=1, position={0, 0, 1615, 694}, y={"AHU.heaCoi.Q2_flow", "AHU.cooCoi.Q1_flow"}, range={237.0, 239.0, -20000.0, 80000.0}, grid=true, subPlot=102, colors={{28,108,200}, {0,140,72}}, timeUnit="d", displayUnits={"W", "W"});
-plotExpression(apply(BICBase_Sacra[end].Building.zoneVAV1.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV2.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV3.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV4.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV5.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV6.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV7.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV8.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV9.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV10.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV11.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV12.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV13.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV14.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV15.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV16.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV17.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV18.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV19.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV20.VAVbox.terHea.Q1_flow+BICBase_Sacra[end].Building.zoneVAV21.VAVbox.terHea.Q1_flow), false, "Terminal reheat [W]", 1);
-createPlot(id=1, position={0, 0, 1615, 694}, y={"AHU.fanSup.P"}, range={237.0, 239.0, -500.0, 3500.0}, grid=true, subPlot=103, colors={{28,108,200}}, timeUnit="d", displayUnits={"W"});
+LinePattern.Dot, LinePattern.Solid, LinePattern.Solid, LinePattern.Dot}, thicknesses={0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 
+0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.5, 0.5, 0.25}, timeUnit="d", displayUnits={"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
+ "", "degC", "degC", ""});
+createPlot(id=1, position={10, 21, 600, 400}, y={"datRea.y[7]", "datRea.y[11]", "Building.zoneVAV1.zon.TAir", "Building.zoneVAV5.zon.TAir"}, range={189.0, 194.0, 15.0, 35.0}, grid=true, subPlot=104, colors={{28,108,200}, {28,108,200}, {238,46,47}, {238,46,47}}, patterns={LinePattern.Solid, LinePattern.Dash, LinePattern.Solid, LinePattern.Dash}, timeUnit="d", displayUnits={"", "", "degC", "degC"});
+createPlot(id=2, position={0, 0, 1615, 691}, y={"datRea.y[2]", "AHU.TSup.T"}, range={189.0, 194.0, 10.0, 25.0}, grid=true, subPlot=101, colors={{28,108,200}, {238,46,47}}, timeUnit="d", displayUnits={"", "degC"});
+createPlot(id=2, position={0, 0, 1615, 691}, y={"datRea.y[3]", "AHU.TSup.port_a.m_flow"}, range={189.0, 194.0, -2.0, 6.0}, grid=true, subPlot=102, colors={{28,108,200}, {238,46,47}}, timeUnit="d", displayUnits={"", "kg/s"});
+createPlot(id=2, position={0, 0, 1615, 691}, y={"datRea.y[4]", "AHU.VOut1.port_a.m_flow"}, range={189.0, 194.0, -2.0, 6.0}, grid=true, subPlot=103, colors={{28,108,200}, {238,46,47}}, timeUnit="d", displayUnits={"", "kg/s"});
+createPlot(id=2, position={0, 0, 1615, 691}, y={"datRea.y[5]", "AHU.cooCoi.Q1_flow"}, range={189.0, 194.0, -50000.0, 100000.0}, grid=true, subPlot=104, colors={{28,108,200}, {238,46,47}}, timeUnit="d", displayUnits={"", "W"});
+createPlot(id=2, position={0, 0, 1615, 691}, y={"datRea.y[6]", "AHU.TRet.T", "datRea.y[28]"}, range={189.0, 194.0, 20.0, 28.0}, grid=true, subPlot=105, colors={{28,108,200}, {238,46,47}, {0,140,72}}, timeUnit="d", displayUnits={"", "degC", ""});

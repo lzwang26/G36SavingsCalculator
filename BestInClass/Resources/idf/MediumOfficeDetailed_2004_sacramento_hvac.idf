@@ -148,12 +148,12 @@ SizingPeriod:DesignDay,
 
 RunPeriod,
     Run Period 1,            !- Name
-    1,                       !- Begin Month
-    1,                       !- Begin Day of Month
-    2006.0,                  !- Begin Year
-    12,                      !- End Month
-    31,                      !- End Day of Month
-    2006.0,                  !- End Year
+    7,                       !- Begin Month
+    9,                       !- Begin Day of Month
+    ,                        !- Begin Year
+    7,                       !- End Month
+    11,                      !- End Day of Month
+    ,                        !- End Year
     Sunday,                  !- Day of Week for Start Day
     No,                      !- Use Weather File Holidays and Special Days
     No,                      !- Use Weather File Daylight Saving Period
@@ -4872,8 +4872,8 @@ BuildingSurface:Detailed,
     ActiveStorage_Mid_3 ZN,  !- Zone Name
     Adiabatic,               !- Outside Boundary Condition
     Surface 410,             !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
     ,                        !- View Factor to Ground
     ,                        !- Number of Vertices
     33.6724625,              !- Vertex 1 X-coordinate {m}
@@ -8544,8 +8544,8 @@ BuildingSurface:Detailed,
     Stair_Mid_2 ZN,          !- Zone Name
     Adiabatic,               !- Outside Boundary Condition
     Surface 412,             !- Outside Boundary Condition Object
-    SunExposed,              !- Sun Exposure
-    WindExposed,             !- Wind Exposure
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
     ,                        !- View Factor to Ground
     ,                        !- Number of Vertices
     33.6724625,              !- Vertex 1 X-coordinate {m}
@@ -12791,13 +12791,23 @@ Output:Variable,
     Timestep;                !- Reporting Frequency
 
 Output:Variable,
-    *,                       !- Key Value
-    Zone Mean Air Temperature,  !- Variable Name
+    21 Zone PVAV Supply Outlet Node,  !- Key Value
+    System Node Mass Flow Rate,  !- Variable Name
     Timestep;                !- Reporting Frequency
 
 Output:Variable,
-    *,                       !- Key Value
-    Zone Electric Equipment Electricity Rate,  !- Variable Name
+    21 Zone PVAV Supply Outlet Node,  !- Key Value
+    System Node Temperature, !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    21 Zone PVAV Outdoor Air Node,  !- Key Value
+    System Node Mass Flow Rate,  !- Variable Name
+    Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    *,  !- Key Value
+    Cooling Coil Total Cooling Rate,  !- Variable Name
     Timestep;                !- Reporting Frequency
 
 

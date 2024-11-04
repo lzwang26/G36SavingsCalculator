@@ -40,3 +40,5 @@ process/results/*
 # Jupyter notebook files
 ########################
 *.ipynb_checkpoints
+
+BestInClass/Resources/idf/EPlus/Validation/upgrade/
