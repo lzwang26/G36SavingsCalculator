@@ -7,11 +7,12 @@ model BICBase_Sacra
       weaFile=
           "modelica://BestInClass/Resources/weather/USA_CA_Sacramento.Metro.AP.724839_TMY3.mos",
       minAirFra=0.3,
-      m_flow_zone=1.2*{0.045544,0.040528,0.040357,0.022085,0.43118,0.398818,
+      m_flow_zone=1.2*{0.0553358,0.040528,0.040357,0.022085,0.43118,0.398818,
           0.222669,0.222802,0.066113,1.07,0.986517,0.14797,0.149323,0.07028,
           0.493998,0.53816,0.59377,0.819185,0.097882,0.047462,0.045102},
       m_flow_sys=1.2*5.31),
-      occupancy(occupancy=3600*{5.17,21.17}, period(displayUnit="s") = 86400),
+      occupancy(occupancy=3600*{5.01667,21.01667},
+                                             period(displayUnit="s") = 86400),
     Building(
     zoneVAV7(zon(vol(fluidVolume=204.21*10))),
     zoneVAV8(zon(vol(fluidVolume=118.25*10))),
@@ -38,8 +39,16 @@ model BICBase_Sacra
     zoneVAV21(zon(T_start=24.49+273.15))),
     AHU(TSupSetHea(k=273.15 + 10),
     conEco(VOut_flow_min=0.7293),
-      TRet(T_start=300.18),
-      fanSup(addPowerToMedium=false)),
+      TRet(
+        T_start=300.18,
+        transferHeat=true,
+        TAmb=296.6,
+        tauHeaTra=10),
+      fanSup(addPowerToMedium=false),
+      TSup(
+        transferHeat=true,
+        TAmb=296.6,
+        tauHeaTra=10)),
     internalGains(
       kLig=0,
       kEqu=0,
@@ -65,7 +74,7 @@ model BICBase_Sacra
     final fileName=ModelicaServices.ExternalReferences.loadResource(
         "modelica://BestInClass/Resources/idf/EPlus/Validation/MediumOfficeDetailed_2004_sacramento_hvac.dat"),
     final tableOnFile=true,
-    final columns=2:29,
+    final columns=2:44,
     final tableName="EnergyPlus",
     final smoothness=Modelica.Blocks.Types.Smoothness.ConstantSegments)
     "Reader for EnergyPlus example results"
