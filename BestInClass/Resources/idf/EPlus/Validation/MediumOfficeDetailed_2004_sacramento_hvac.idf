@@ -1717,142 +1717,143 @@ Schedule:Day:Interval,
     Temperature,             !- Schedule Type Limits Name
     No,                      !- Interpolate to Timestep
     12:00,                   !- Time 1 {hh:mm}
-    26.7,                    !- Value Until Time 1
+    30,                    !- Value Until Time 1
     13:00,                   !- Time 2 {hh:mm}
-    27.2555555555556,        !- Value Until Time 2
+    30,        !- Value Until Time 2
     24:00,                   !- Time 3 {hh:mm}
-    26.7;                    !- Value Until Time 3
+    30;                    !- Value Until Time 3
 
 Schedule:Day:Interval,
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Name
     Temperature,             !- Schedule Type Limits Name
     No,                      !- Interpolate to Timestep
     05:00,                   !- Time 1 {hh:mm}
-    26.7,                    !- Value Until Time 1
+    30,                    !- Value Until Time 1
     06:00,                   !- Time 2 {hh:mm}
-    25.6,                    !- Value Until Time 2
+    30,                    !- Value Until Time 2
     07:00,                   !- Time 3 {hh:mm}
-    25,                      !- Value Until Time 3
+    24,                      !- Value Until Time 3
     12:00,                   !- Time 4 {hh:mm}
     24,                      !- Value Until Time 4
     13:00,                   !- Time 5 {hh:mm}
-    24.5555555555556,        !- Value Until Time 5
+    24,        !- Value Until Time 5
     22:00,                   !- Time 6 {hh:mm}
     24,                      !- Value Until Time 6
     24:00,                   !- Time 7 {hh:mm}
-    26.7;                    !- Value Until Time 7
+    30;                    !- Value Until Time 7
 
 Schedule:Day:Interval,
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Sat Day 1,  !- Name
     Temperature,             !- Schedule Type Limits Name
     No,                      !- Interpolate to Timestep
     05:00,                   !- Time 1 {hh:mm}
-    26.7,                    !- Value Until Time 1
+    30,                    !- Value Until Time 1
     06:00,                   !- Time 2 {hh:mm}
-    25.7,                    !- Value Until Time 2
+    30,                    !- Value Until Time 2
     07:00,                   !- Time 3 {hh:mm}
-    25,                      !- Value Until Time 3
+    24,                      !- Value Until Time 3
     12:00,                   !- Time 4 {hh:mm}
     24,                      !- Value Until Time 4
     13:00,                   !- Time 5 {hh:mm}
-    24.5555555555556,        !- Value Until Time 5
-    17:00,                   !- Time 6 {hh:mm}
+    24,        !- Value Until Time 5
+    22:00,                   !- Time 6 {hh:mm}
     24,                      !- Value Until Time 6
     24:00,                   !- Time 7 {hh:mm}
-    26.7;                    !- Value Until Time 7
+    30;                    !- Value Until Time 7
 
 Schedule:Day:Interval,
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Summer Design Day 1,  !- Name
     Temperature,             !- Schedule Type Limits Name
     No,                      !- Interpolate to Timestep
     05:00,                   !- Time 1 {hh:mm}
-    26.7,                    !- Value Until Time 1
+    30,                    !- Value Until Time 1
     06:00,                   !- Time 2 {hh:mm}
-    25.7,                    !- Value Until Time 2
+    30,                    !- Value Until Time 2
     07:00,                   !- Time 3 {hh:mm}
-    25,                      !- Value Until Time 3
+    24,                      !- Value Until Time 3
     22:00,                   !- Time 4 {hh:mm}
     24,                      !- Value Until Time 4
     24:00,                   !- Time 5 {hh:mm}
-    26.7;                    !- Value Until Time 5
+    30;                    !- Value Until Time 5
 
 Schedule:Day:Interval,
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Winter Design Day 1,  !- Name
     Temperature,             !- Schedule Type Limits Name
     No,                      !- Interpolate to Timestep
     24:00,                   !- Time 1 {hh:mm}
-    26.7;                    !- Value Until Time 1
+    30;                    !- Value Until Time 1
 
 Schedule:Day:Interval,
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Default 1,  !- Name
     Temperature,             !- Schedule Type Limits Name
     No,                      !- Interpolate to Timestep
     12:00,                   !- Time 1 {hh:mm}
-    15.6,                    !- Value Until Time 1
+    12,                    !- Value Until Time 1
     13:00,                   !- Time 2 {hh:mm}
-    15.0444444444444,        !- Value Until Time 2
+    12,        !- Value Until Time 2
     24:00,                   !- Time 3 {hh:mm}
-    15.6;                    !- Value Until Time 3
+    12;                    !- Value Until Time 3
 
 Schedule:Day:Interval,
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Name
     Temperature,             !- Schedule Type Limits Name
     No,                      !- Interpolate to Timestep
     05:00,                   !- Time 1 {hh:mm}
-    15.6,                    !- Value Until Time 1
+    12,                    !- Value Until Time 1
     06:00,                   !- Time 2 {hh:mm}
-    17.8,                    !- Value Until Time 2
+    12,                    !- Value Until Time 2
     07:00,                   !- Time 3 {hh:mm}
     20,                      !- Value Until Time 3
     12:00,                   !- Time 4 {hh:mm}
-    21,                      !- Value Until Time 4
+    20,                      !- Value Until Time 4
     13:00,                   !- Time 5 {hh:mm}
-    20.4444444444444,        !- Value Until Time 5
+    20,                      !- Value Until Time 5
     22:00,                   !- Time 6 {hh:mm}
-    21,                      !- Value Until Time 6
+    20,                      !- Value Until Time 6
     24:00,                   !- Time 7 {hh:mm}
-    15.6;                    !- Value Until Time 7
+    12;                    !- Value Until Time 7
 
 Schedule:Day:Interval,
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Sat Day 1,  !- Name
     Temperature,             !- Schedule Type Limits Name
     No,                      !- Interpolate to Timestep
     05:00,                   !- Time 1 {hh:mm}
-    15.6,                    !- Value Until Time 1
+    12,                    !- Value Until Time 1
     06:00,                   !- Time 2 {hh:mm}
-    17.8,                    !- Value Until Time 2
+    12,                    !- Value Until Time 2
     07:00,                   !- Time 3 {hh:mm}
     20,                      !- Value Until Time 3
     12:00,                   !- Time 4 {hh:mm}
-    21,                      !- Value Until Time 4
+    20,                      !- Value Until Time 4
     13:00,                   !- Time 5 {hh:mm}
-    20.4444444444444,        !- Value Until Time 5
-    17:00,                   !- Time 6 {hh:mm}
-    21,                      !- Value Until Time 6
+    20,                      !- Value Until Time 5
+    22:00,                   !- Time 6 {hh:mm}
+    20,                      !- Value Until Time 6
     24:00,                   !- Time 7 {hh:mm}
-    15.6;                    !- Value Until Time 7
+    12;                    !- Value Until Time 7
+
 
 Schedule:Day:Interval,
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Summer Design Day 1,  !- Name
     Temperature,             !- Schedule Type Limits Name
     No,                      !- Interpolate to Timestep
     24:00,                   !- Time 1 {hh:mm}
-    15.6;                    !- Value Until Time 1
+    12;                    !- Value Until Time 1
 
 Schedule:Day:Interval,
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Winter Design Day 1,  !- Name
     Temperature,             !- Schedule Type Limits Name
     No,                      !- Interpolate to Timestep
     05:00,                   !- Time 1 {hh:mm}
-    15.6,                    !- Value Until Time 1
+    12,                    !- Value Until Time 1
     06:00,                   !- Time 2 {hh:mm}
-    17.6,                    !- Value Until Time 2
+    12,                    !- Value Until Time 2
     07:00,                   !- Time 3 {hh:mm}
-    19.6,                    !- Value Until Time 3
+    20,                    !- Value Until Time 3
     22:00,                   !- Time 4 {hh:mm}
-    21,                      !- Value Until Time 4
+    20,                      !- Value Until Time 4
     24:00,                   !- Time 5 {hh:mm}
-    15.6;                    !- Value Until Time 5
+    12;                    !- Value Until Time 5
 
 Schedule:Day:Interval,
     ActiveStorage_Mid_1 ZN VAV Terminal - MDP Default 1,  !- Name
@@ -12768,9 +12769,87 @@ Output:Variable,
     Timestep;                !- Reporting Frequency
 
 Output:Variable,
+    21 Zone PVAV Supply Inlet Node,                       !- Key Value
+    System Node Mass Flow Rate,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+
+Output:Variable,
     *,                       !- Key Value
     Zone Air Temperature,    !- Variable Name
     Timestep;                !- Reporting Frequency
+
+Output:Variable,
+    ActiveStorage_Mid_1 ZN VAV Terminal,                       !- Key Value
+    Zone Air Terminal VAV Damper Position,    !- Variable Name
+    Timestep;                !- Reporting Frequency
+	
+Output:Variable,
+    ActiveStorage_Mid_1 ZN VAV Terminal Damper Outlet,                       !- Key Value
+    System Node Temperature,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+	
+Output:Variable,
+    ActiveStorage_Mid_1 ZN VAV Terminal Damper Outlet,                       !- Key Value
+    System Node Mass Flow Rate,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+
+Output:Variable,
+    ActiveStorage_Mid_1 ZN VAV Terminal Outlet Air Node,                       !- Key Value
+    System Node Temperature,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+	
+Output:Variable,
+    ActiveStorage_Mid_1 ZN VAV Terminal Outlet Air Node,                       !- Key Value
+    System Node Mass Flow Rate,    !- Variable Name
+    Timestep;                !- Reporting Frequency
+	
+Output:Variable,
+    ConfRoom_Mid_1 ZN VAV Terminal,                       !- Key Value
+    Zone Air Terminal VAV Damper Position,    !- Variable Name
+    Timestep;                !- Reporting Frequency
+	
+Output:Variable,
+    ConfRoom_Mid_1 ZN VAV Terminal Damper Outlet,                       !- Key Value
+    System Node Temperature,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+	
+Output:Variable,
+    ConfRoom_Mid_1 ZN VAV Terminal Damper Outlet,                       !- Key Value
+    System Node Mass Flow Rate,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+
+Output:Variable,
+    ConfRoom_Mid_1 ZN VAV Terminal Outlet Air Node,                       !- Key Value
+    System Node Temperature,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+	
+Output:Variable,
+    ConfRoom_Mid_1 ZN VAV Terminal Outlet Air Node,                       !- Key Value
+    System Node Mass Flow Rate,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+
+Output:Variable,
+    ACTIVESTORAGE_MID_1 ZN ELECTRIC REHEAT COIL,                       !- Key Value
+    Heating Coil Heating Rate,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+
+Output:Variable,
+    CONFROOM_MID_1 ZN ELECTRIC REHEAT COIL,                       !- Key Value
+    Heating Coil Heating Rate,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+
+Output:Variable,
+    21 Zone PVAV Mixed Air Node,                       !- Key Value
+    System Node Temperature,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+	
+Output:Variable,
+    21 Zone PVAV Mixed Air Node,                       !- Key Value
+    System Node Mass Flow Rate,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
+
+
+
 
 
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:SQLITE ===========

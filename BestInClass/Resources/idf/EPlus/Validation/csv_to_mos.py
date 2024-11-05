@@ -38,7 +38,22 @@ def main():
       'RESTROOM_MID ZN:Zone Air Temperature [C](TimeStep)',
       'STAIR_MID_1 ZN:Zone Air Temperature [C](TimeStep)',
       'STAIR_MID_2 ZN:Zone Air Temperature [C](TimeStep)',
-      'MIDFLOOR_PLENUM ZN:Zone Air Temperature [C](TimeStep)'
+      'MIDFLOOR_PLENUM ZN:Zone Air Temperature [C](TimeStep)',
+      'ACTIVESTORAGE_MID_1 ZN VAV TERMINAL:Zone Air Terminal VAV Damper Position [](TimeStep)',
+      'CONFROOM_MID_1 ZN VAV TERMINAL:Zone Air Terminal VAV Damper Position [](TimeStep)',
+      'ACTIVESTORAGE_MID_1 ZN VAV TERMINAL DAMPER OUTLET:System Node Temperature [C](TimeStep)',
+      'ACTIVESTORAGE_MID_1 ZN VAV TERMINAL DAMPER OUTLET:System Node Mass Flow Rate [kg/s](TimeStep)',
+      'ACTIVESTORAGE_MID_1 ZN VAV TERMINAL OUTLET AIR NODE:System Node Temperature [C](TimeStep)',
+      'ACTIVESTORAGE_MID_1 ZN VAV TERMINAL OUTLET AIR NODE:System Node Mass Flow Rate [kg/s](TimeStep)',
+      'CONFROOM_MID_1 ZN VAV TERMINAL DAMPER OUTLET:System Node Temperature [C](TimeStep)',
+      'CONFROOM_MID_1 ZN VAV TERMINAL DAMPER OUTLET:System Node Mass Flow Rate [kg/s](TimeStep)',
+      'CONFROOM_MID_1 ZN VAV TERMINAL OUTLET AIR NODE:System Node Temperature [C](TimeStep)',
+      'CONFROOM_MID_1 ZN VAV TERMINAL OUTLET AIR NODE:System Node Mass Flow Rate [kg/s](TimeStep)',    
+      'ACTIVESTORAGE_MID_1 ZN ELECTRIC REHEAT COIL:Heating Coil Heating Rate [W](TimeStep)',
+      'CONFROOM_MID_1 ZN ELECTRIC REHEAT COIL:Heating Coil Heating Rate [W](TimeStep)',
+      '21 ZONE PVAV MIXED AIR NODE:System Node Temperature [C](TimeStep)',
+      '21 ZONE PVAV MIXED AIR NODE:System Node Mass Flow Rate [kg/s](TimeStep)',
+      '21 ZONE PVAV SUPPLY INLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)'
     ]
 
     e.energyplus_csv_to_mos(
