@@ -11876,19 +11876,19 @@ ZoneHVAC:EquipmentConnections,
 Fan:VariableVolume,
     21 Zone PVAV Fan,        !- Name
     OfficeMedium HVACOperationSchd,  !- Availability Schedule Name
-    0.6045,                  !- Fan Total Efficiency
-    1389.9161178,            !- Pressure Rise {Pa}
+    0.49,                  !- Fan Total Efficiency
+    1402,                     !- Pressure Rise {Pa}
     AutoSize,                !- Maximum Flow Rate {m3/s}
     Fraction,                !- Fan Power Minimum Flow Rate Input Method
     0.25,                    !- Fan Power Minimum Flow Fraction
     0,                       !- Fan Power Minimum Air Flow Rate {m3/s}
-    0.93,                    !- Motor Efficiency
+    1,                    !- Motor Efficiency
     0,                       !- Motor In Airstream Fraction
-    0.04076,                 !- Fan Power Coefficient 1
-    0.0881,                  !- Fan Power Coefficient 2
-    -0.0729,                 !- Fan Power Coefficient 3
-    0.9437,                  !- Fan Power Coefficient 4
-    0,                       !- Fan Power Coefficient 5
+    0.01107454,                 !- Fan Power Coefficient 1
+    0.09554293,                  !- Fan Power Coefficient 2
+    0.75244608,                 !- Fan Power Coefficient 3
+    -0.90390236,                  !- Fan Power Coefficient 4
+    1.04483881,                       !- Fan Power Coefficient 5
     21 Zone PVAV Main Gas Htg Coil 130kBtu/hr 0.81 Thermal Eff Outlet Air Node,  !- Air Inlet Node Name
     21 Zone PVAV Supply Outlet Node,  !- Air Outlet Node Name
     General;                 !- End-Use Subcategory
@@ -12848,7 +12848,10 @@ Output:Variable,
     System Node Mass Flow Rate,    !- Variable Name
     Timestep;                !- Reporting Frequency	
 
-
+Output:Variable,
+    21 Zone PVAV Fan,                       !- Key Value
+    Fan Electricity Rate,    !- Variable Name
+    Timestep;                !- Reporting Frequency	
 
 
 

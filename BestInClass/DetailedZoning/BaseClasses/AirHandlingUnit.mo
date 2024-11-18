@@ -36,7 +36,7 @@ model AirHandlingUnit "Air handing system for VAV"
     configuration=Buildings.Fluid.Types.HeatExchangerConfiguration.CounterFlow,
     Q_flow_nominal=m_flow_nominal*1006*(16.7 - 8.5),
     dp1_nominal=0,
-    dp2_nominal=200 + 200 + 100 + 40,
+    dp2_nominal=350 + 350 + 200 + 40,
     allowFlowReversal1=false,
     allowFlowReversal2=allowFlowReversal,
     T_a1_nominal=318.15,
@@ -241,8 +241,8 @@ public
     annotation (Placement(transformation(extent={{258,232},{238,252}})));
   Buildings.Fluid.Movers.SpeedControlled_y fanSup(
     redeclare package Medium = MediumA,
-    per(pressure(V_flow={0,m_flow_nominal/1.2*2}, dp=2*{780 + 10 + dpBuiStaSet,
-            0})),
+    per(pressure(V_flow={0,m_flow_nominal/1.2,m_flow_nominal/1.2*2}, dp=2*{1380
+             + 10 + dpBuiStaSet,(1380 + 10 + dpBuiStaSet)/2,0})),
     energyDynamics=Modelica.Fluid.Types.Dynamics.FixedInitial) "Supply air fan"
     annotation (Placement(transformation(extent={{338,52},{358,72}})));
 

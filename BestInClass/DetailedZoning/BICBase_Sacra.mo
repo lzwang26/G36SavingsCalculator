@@ -10,9 +10,9 @@ model BICBase_Sacra
       m_flow_zone=1.2*{0.0553358,0.040528,0.040357,0.022085,0.43118,0.398818,
           0.222669,0.222802,0.066113,1.07,0.986517,0.14797,0.149323,0.07028,
           0.493998,0.53816,0.59377,0.819185,0.097882,0.047462,0.045102},
-      m_flow_sys=1.2*5.31),
+      m_flow_sys=1.2*6.35),
       occupancy(occupancy=3600*{5.01667,21.01667},
-                                             period(displayUnit="s") = 86400),
+      period(displayUnit="s") = 86400),
     Building(
     zoneVAV7(zon(vol(fluidVolume=204.21*10))),
     zoneVAV8(zon(vol(fluidVolume=118.25*10))),
@@ -74,12 +74,36 @@ model BICBase_Sacra
     final fileName=ModelicaServices.ExternalReferences.loadResource(
         "modelica://BestInClass/Resources/idf/EPlus/Validation/MediumOfficeDetailed_2004_sacramento_hvac.dat"),
     final tableOnFile=true,
-    final columns=2:44,
+    final columns=2:45,
     final tableName="EnergyPlus",
     final smoothness=Modelica.Blocks.Types.Smoothness.ConstantSegments)
     "Reader for EnergyPlus example results"
     annotation (Placement(transformation(extent={{60,40},{80,60}})));
 
+  Modelica.Blocks.Continuous.Integrator ECoiEPlu(initType=Modelica.Blocks.Types.Init.InitialState,
+      y_start=0) "Cooling coil energy consumption from EnergyPlus"
+    annotation (Placement(transformation(extent={{138,40},{158,60}})));
+  Modelica.Blocks.Sources.RealExpression PCoiEPlu(y=datRea.y[5]/3.2)
+    "Cooling coil power consumption from EnergyPlus"
+    annotation (Placement(transformation(extent={{104,40},{124,60}})));
+  Modelica.Blocks.Continuous.Integrator ECoiESpa(initType=Modelica.Blocks.Types.Init.InitialState,
+      y_start=0) "Cooling coil energy consumption from Spawn"
+    annotation (Placement(transformation(extent={{138,10},{158,30}})));
+  Modelica.Blocks.Sources.RealExpression PCoiSpa(y=AHU.cooCoi.Q1_flow/3.2)
+    "Cooling coil power consumption from Spawn"
+    annotation (Placement(transformation(extent={{104,10},{124,30}})));
+  Modelica.Blocks.Continuous.Integrator EFanEPlu(initType=Modelica.Blocks.Types.Init.InitialState,
+      y_start=0) "Fan energy consumption from EnergyPlus"
+    annotation (Placement(transformation(extent={{140,-28},{160,-8}})));
+  Modelica.Blocks.Sources.RealExpression PFanEPlu(y=datRea.y[44])
+    "Fan power consumption from EnergyPlus"
+    annotation (Placement(transformation(extent={{106,-28},{126,-8}})));
+  Modelica.Blocks.Continuous.Integrator EFanESpa(initType=Modelica.Blocks.Types.Init.InitialState,
+      y_start=0) "Fan energy consumption from Spawn"
+    annotation (Placement(transformation(extent={{140,-58},{160,-38}})));
+  Modelica.Blocks.Sources.RealExpression PFanSpa(y=AHU.fanSup.P)
+    "Fan power consumption from Spawn"
+    annotation (Placement(transformation(extent={{106,-58},{126,-38}})));
 equation
   connect(pSetDuc.y,fanVFD.u)    annotation (Line(points={{-58,-10},{-22,-10}},
                                                                               color={0,0,127}));
@@ -91,6 +115,14 @@ equation
       points={{-60,50},{21.6,50},{21.6,-2}},
       color={255,204,51},
       thickness=0.5));
+  connect(PCoiEPlu.y, ECoiEPlu.u)
+    annotation (Line(points={{125,50},{136,50}}, color={0,0,127}));
+  connect(PCoiSpa.y, ECoiESpa.u)
+    annotation (Line(points={{125,20},{136,20}}, color={0,0,127}));
+  connect(PFanEPlu.y, EFanEPlu.u)
+    annotation (Line(points={{127,-18},{138,-18}}, color={0,0,127}));
+  connect(PFanSpa.y, EFanESpa.u)
+    annotation (Line(points={{127,-48},{138,-48}}, color={0,0,127}));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
         coordinateSystem(preserveAspectRatio=false),
                     graphics={

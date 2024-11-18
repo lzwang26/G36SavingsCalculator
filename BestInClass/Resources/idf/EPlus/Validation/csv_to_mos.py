@@ -53,7 +53,8 @@ def main():
       'CONFROOM_MID_1 ZN ELECTRIC REHEAT COIL:Heating Coil Heating Rate [W](TimeStep)',
       '21 ZONE PVAV MIXED AIR NODE:System Node Temperature [C](TimeStep)',
       '21 ZONE PVAV MIXED AIR NODE:System Node Mass Flow Rate [kg/s](TimeStep)',
-      '21 ZONE PVAV SUPPLY INLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)'
+      '21 ZONE PVAV SUPPLY INLET NODE:System Node Mass Flow Rate [kg/s](TimeStep)',
+      '21 ZONE PVAV FAN:Fan Electricity Rate [W](TimeStep)'
     ]
 
     e.energyplus_csv_to_mos(
