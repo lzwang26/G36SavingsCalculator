@@ -152,7 +152,7 @@ RunPeriod,
     9,                       !- Begin Day of Month
     ,                        !- Begin Year
     7,                       !- End Month
-    19,                      !- End Day of Month
+    22,                      !- End Day of Month
     ,                        !- End Year
     Monday,                  !- Day of Week for Start Day
     No,                      !- Use Weather File Holidays and Special Days
