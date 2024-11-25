@@ -129,7 +129,7 @@ equation
         Line(points={{-142,48}}, color={28,108,200})}),
     experiment(
       StartTime=16329600,
-      StopTime=16761600,
+      StopTime=17280000,
       Interval=599.999616,
       __Dymola_Algorithm="Cvode"),
     __Dymola_Commands(file=

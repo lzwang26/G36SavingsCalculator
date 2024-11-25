@@ -152,7 +152,7 @@ RunPeriod,
     9,                       !- Begin Day of Month
     ,                        !- Begin Year
     7,                       !- End Month
-    13,                      !- End Day of Month
+    19,                      !- End Day of Month
     ,                        !- End Year
     Monday,                  !- Day of Week for Start Day
     No,                      !- Use Weather File Holidays and Special Days
@@ -2091,14 +2091,14 @@ Schedule:Day:Interval,
 
 Schedule:Week:Daily,
     OfficeMedium HTGSETP_SCH_PACU_VAV_bot Week Rule - Jan1-Dec31,  !- Name
-    OfficeMedium HTGSETP_SCH_PACU_VAV_bot Default,  !- Sunday Schedule:Day Name
+    OfficeMedium HTGSETP_SCH_PACU_VAV_bot Wkdy Day,  !- Sunday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_PACU_VAV_bot Wkdy Day,  !- Monday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_PACU_VAV_bot Wkdy Day,  !- Tuesday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_PACU_VAV_bot Wkdy Day,  !- Wednesday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_PACU_VAV_bot Wkdy Day,  !- Thursday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_PACU_VAV_bot Wkdy Day,  !- Friday Schedule:Day Name
-    OfficeMedium HTGSETP_SCH_PACU_VAV_bot Sat Day,  !- Saturday Schedule:Day Name
-    OfficeMedium HTGSETP_SCH_PACU_VAV_bot Default,  !- Holiday Schedule:Day Name
+    OfficeMedium HTGSETP_SCH_PACU_VAV_bot Wkdy Day,  !- Saturday Schedule:Day Name
+    OfficeMedium HTGSETP_SCH_PACU_VAV_bot Wkdy Day,  !- Holiday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_PACU_VAV_bot Summer Design Day,  !- SummerDesignDay Schedule:Day Name
     OfficeMedium HTGSETP_SCH_PACU_VAV_bot Winter Design Day,  !- WinterDesignDay Schedule:Day Name
     OfficeMedium HTGSETP_SCH_PACU_VAV_bot Default,  !- CustomDay1 Schedule:Day Name
@@ -2106,14 +2106,14 @@ Schedule:Week:Daily,
 
 Schedule:Week:Daily,
     OfficeMedium CLGSETP_SCH_NO_SETBACK Week Rule - Jan1-Dec31,  !- Name
-    OfficeMedium CLGSETP_SCH_NO_SETBACK Default,  !- Sunday Schedule:Day Name
+    OfficeMedium CLGSETP_SCH_NO_SETBACK Default|WntrDsn|Sat|Wkdy Day,  !- Sunday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_NO_SETBACK Default|WntrDsn|Sat|Wkdy Day,  !- Monday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_NO_SETBACK Default|WntrDsn|Sat|Wkdy Day,  !- Tuesday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_NO_SETBACK Default|WntrDsn|Sat|Wkdy Day,  !- Wednesday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_NO_SETBACK Default|WntrDsn|Sat|Wkdy Day,  !- Thursday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_NO_SETBACK Default|WntrDsn|Sat|Wkdy Day,  !- Friday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_NO_SETBACK Default|WntrDsn|Sat|Wkdy Day,  !- Saturday Schedule:Day Name
-    OfficeMedium CLGSETP_SCH_NO_SETBACK Default,  !- Holiday Schedule:Day Name
+    OfficeMedium CLGSETP_SCH_NO_SETBACK Default|WntrDsn|Sat|Wkdy Day,  !- Holiday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_NO_SETBACK Summer Design Day,  !- SummerDesignDay Schedule:Day Name
     OfficeMedium CLGSETP_SCH_NO_SETBACK Winter Design Day,  !- WinterDesignDay Schedule:Day Name
     OfficeMedium CLGSETP_SCH_NO_SETBACK Default,  !- CustomDay1 Schedule:Day Name
@@ -2121,14 +2121,14 @@ Schedule:Week:Daily,
 
 Schedule:Week:Daily,
     OfficeMedium MinOA_MotorizedDamper_Sched Week Rule - Jan1-Dec31,  !- Name
-    OfficeMedium MinOA_MotorizedDamper_Sched Default,  !- Sunday Schedule:Day Name
+    OfficeMedium MinOA_MotorizedDamper_Sched SmrDsn|Wkdy Day,  !- Sunday Schedule:Day Name
     OfficeMedium MinOA_MotorizedDamper_Sched SmrDsn|Wkdy Day,  !- Monday Schedule:Day Name
     OfficeMedium MinOA_MotorizedDamper_Sched SmrDsn|Wkdy Day,  !- Tuesday Schedule:Day Name
     OfficeMedium MinOA_MotorizedDamper_Sched SmrDsn|Wkdy Day,  !- Wednesday Schedule:Day Name
     OfficeMedium MinOA_MotorizedDamper_Sched SmrDsn|Wkdy Day,  !- Thursday Schedule:Day Name
     OfficeMedium MinOA_MotorizedDamper_Sched SmrDsn|Wkdy Day,  !- Friday Schedule:Day Name
-    OfficeMedium MinOA_MotorizedDamper_Sched WntrDsn|Sat Day,  !- Saturday Schedule:Day Name
-    OfficeMedium MinOA_MotorizedDamper_Sched Default,  !- Holiday Schedule:Day Name
+    OfficeMedium MinOA_MotorizedDamper_Sched SmrDsn|Wkdy Day,  !- Saturday Schedule:Day Name
+    OfficeMedium MinOA_MotorizedDamper_Sched SmrDsn|Wkdy Day,  !- Holiday Schedule:Day Name
     OfficeMedium MinOA_MotorizedDamper_Sched Summer Design Day,  !- SummerDesignDay Schedule:Day Name
     OfficeMedium MinOA_MotorizedDamper_Sched Winter Design Day,  !- WinterDesignDay Schedule:Day Name
     OfficeMedium MinOA_MotorizedDamper_Sched Default,  !- CustomDay1 Schedule:Day Name
@@ -2271,14 +2271,14 @@ Schedule:Week:Daily,
 
 Schedule:Week:Daily,
     OfficeMedium BLDG_OCC_SCH Week Rule - Jan1-Dec31,  !- Name
-    OfficeMedium BLDG_OCC_SCH Default,  !- Sunday Schedule:Day Name
+    OfficeMedium BLDG_OCC_SCH Wkdy Day,  !- Sunday Schedule:Day Name
     OfficeMedium BLDG_OCC_SCH Wkdy Day,  !- Monday Schedule:Day Name
     OfficeMedium BLDG_OCC_SCH Wkdy Day,  !- Tuesday Schedule:Day Name
     OfficeMedium BLDG_OCC_SCH Wkdy Day,  !- Wednesday Schedule:Day Name
     OfficeMedium BLDG_OCC_SCH Wkdy Day,  !- Thursday Schedule:Day Name
     OfficeMedium BLDG_OCC_SCH Wkdy Day,  !- Friday Schedule:Day Name
-    OfficeMedium BLDG_OCC_SCH Sat Day,  !- Saturday Schedule:Day Name
-    OfficeMedium BLDG_OCC_SCH Default,  !- Holiday Schedule:Day Name
+    OfficeMedium BLDG_OCC_SCH Wkdy Day,  !- Saturday Schedule:Day Name
+    OfficeMedium BLDG_OCC_SCH Wkdy Day,  !- Holiday Schedule:Day Name
     OfficeMedium BLDG_OCC_SCH Summer Design Day,  !- SummerDesignDay Schedule:Day Name
     OfficeMedium BLDG_OCC_SCH Winter Design Day,  !- WinterDesignDay Schedule:Day Name
     OfficeMedium BLDG_OCC_SCH Default,  !- CustomDay1 Schedule:Day Name
@@ -2286,7 +2286,7 @@ Schedule:Week:Daily,
 
 Schedule:Week:Daily,
     OfficeMedium BLDG_SWH_SCH Week Rule - Jan1-Dec31,  !- Name
-    OfficeMedium BLDG_SWH_SCH Default,  !- Sunday Schedule:Day Name
+    OfficeMedium BLDG_SWH_SCH SmrDsn|Wkdy Day,  !- Sunday Schedule:Day Name
     OfficeMedium BLDG_SWH_SCH SmrDsn|Wkdy Day,  !- Monday Schedule:Day Name
     OfficeMedium BLDG_SWH_SCH SmrDsn|Wkdy Day,  !- Tuesday Schedule:Day Name
     OfficeMedium BLDG_SWH_SCH SmrDsn|Wkdy Day,  !- Wednesday Schedule:Day Name
@@ -2331,18 +2331,18 @@ Schedule:Week:Daily,
 
 Schedule:Week:Daily,
     OfficeMedium HVACOperationSchd Week Rule - Jan1-Dec31,  !- Name
-    OfficeMedium HVACOperationSchd Default,  !- Sunday Schedule:Day Name
+    OfficeMedium HVACOperationSchd SmrDsn|Wkdy Day,  !- Sunday Schedule:Day Name
     OfficeMedium HVACOperationSchd SmrDsn|Wkdy Day,  !- Monday Schedule:Day Name
     OfficeMedium HVACOperationSchd SmrDsn|Wkdy Day,  !- Tuesday Schedule:Day Name
     OfficeMedium HVACOperationSchd SmrDsn|Wkdy Day,  !- Wednesday Schedule:Day Name
     OfficeMedium HVACOperationSchd SmrDsn|Wkdy Day,  !- Thursday Schedule:Day Name
     OfficeMedium HVACOperationSchd SmrDsn|Wkdy Day,  !- Friday Schedule:Day Name
-    OfficeMedium HVACOperationSchd WntrDsn|Sat Day,  !- Saturday Schedule:Day Name
-    OfficeMedium HVACOperationSchd Default,  !- Holiday Schedule:Day Name
+    OfficeMedium HVACOperationSchd SmrDsn|Wkdy Day,  !- Saturday Schedule:Day Name
+    OfficeMedium HVACOperationSchd SmrDsn|Wkdy Day,  !- Holiday Schedule:Day Name
     OfficeMedium HVACOperationSchd Summer Design Day,  !- SummerDesignDay Schedule:Day Name
     OfficeMedium HVACOperationSchd Winter Design Day,  !- WinterDesignDay Schedule:Day Name
-    OfficeMedium HVACOperationSchd Default,  !- CustomDay1 Schedule:Day Name
-    OfficeMedium HVACOperationSchd Default;  !- CustomDay2 Schedule:Day Name
+    OfficeMedium HVACOperationSchd SmrDsn|Wkdy Day,  !- CustomDay1 Schedule:Day Name
+    OfficeMedium HVACOperationSchd SmrDsn|Wkdy Day;  !- CustomDay2 Schedule:Day Name
 
 Schedule:Week:Daily,
     OfficeMedium INFIL_Door_Opening_SCH Week Rule - Jan1-Dec31,  !- Name
@@ -2481,14 +2481,14 @@ Schedule:Week:Daily,
 
 Schedule:Week:Daily,
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM - occupant standby mode Week Rule - Jan1-Dec31,  !- Name
-    OfficeMedium CLGSETP_SCH_YES_OPTIMUM Default 1,  !- Sunday Schedule:Day Name
+    OfficeMedium CLGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Sunday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Monday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Tuesday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Wednesday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Thursday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Friday Schedule:Day Name
-    OfficeMedium CLGSETP_SCH_YES_OPTIMUM Sat Day 1,  !- Saturday Schedule:Day Name
-    OfficeMedium CLGSETP_SCH_YES_OPTIMUM Default 1,  !- Holiday Schedule:Day Name
+    OfficeMedium CLGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Saturday Schedule:Day Name
+    OfficeMedium CLGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Holiday Schedule:Day Name
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Summer Design Day 1,  !- SummerDesignDay Schedule:Day Name
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Winter Design Day 1,  !- WinterDesignDay Schedule:Day Name
     OfficeMedium CLGSETP_SCH_YES_OPTIMUM Default 1,  !- CustomDay1 Schedule:Day Name
@@ -2496,13 +2496,13 @@ Schedule:Week:Daily,
 
 Schedule:Week:Daily,
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM - occupant standby mode Week Rule - Jan1-Dec31,  !- Name
-    OfficeMedium HTGSETP_SCH_YES_OPTIMUM Default 1,  !- Sunday Schedule:Day Name
+    OfficeMedium HTGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Sunday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Monday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Tuesday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Wednesday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Thursday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Friday Schedule:Day Name
-    OfficeMedium HTGSETP_SCH_YES_OPTIMUM Sat Day 1,  !- Saturday Schedule:Day Name
+    OfficeMedium HTGSETP_SCH_YES_OPTIMUM Wkdy Day 1,  !- Saturday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Default 1,  !- Holiday Schedule:Day Name
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Summer Design Day 1,  !- SummerDesignDay Schedule:Day Name
     OfficeMedium HTGSETP_SCH_YES_OPTIMUM Winter Design Day 1,  !- WinterDesignDay Schedule:Day Name
@@ -11884,11 +11884,11 @@ Fan:VariableVolume,
     0,                       !- Fan Power Minimum Air Flow Rate {m3/s}
     1,                    !- Motor Efficiency
     0,                       !- Motor In Airstream Fraction
-    0.01107454,                 !- Fan Power Coefficient 1
-    0.09554293,                  !- Fan Power Coefficient 2
-    0.75244608,                 !- Fan Power Coefficient 3
-    -0.90390236,                  !- Fan Power Coefficient 4
-    1.04483881,                       !- Fan Power Coefficient 5
+    -0.00364558,                 !- Fan Power Coefficient 1
+    0.38553447,                  !- Fan Power Coefficient 2
+    -0.6851734,                 !- Fan Power Coefficient 3
+    1.30328451,                  !- Fan Power Coefficient 4
+    0,                       !- Fan Power Coefficient 5
     21 Zone PVAV Main Gas Htg Coil 130kBtu/hr 0.81 Thermal Eff Outlet Air Node,  !- Air Inlet Node Name
     21 Zone PVAV Supply Outlet Node,  !- Air Outlet Node Name
     General;                 !- End-Use Subcategory

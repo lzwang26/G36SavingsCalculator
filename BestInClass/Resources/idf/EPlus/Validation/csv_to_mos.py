@@ -62,7 +62,7 @@ def main():
     dat_file_name=dat_fil,
     start_time=16329600,
     step_size=60,
-    final_time=16761600)
+    final_time=17280000)
 
 if __name__ == '__main__':
     main()

@@ -33,7 +33,7 @@ x = df_resampled['nominal_m_flow']
 y = df_resampled['nominal_P']
 
 # Fit the polynomial
-coefs = np.polyfit(x, y, 4)
+coefs = np.polyfit(x, y, 3)
 
 # Ensure sum of coefficients is 1 by normalizing
 coefs /= coefs.sum()
