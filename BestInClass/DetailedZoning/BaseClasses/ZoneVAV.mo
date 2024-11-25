@@ -42,7 +42,8 @@ model ZoneVAV "Base class with a zone and a VAV box"
     redeclare package MediumW = MediumW,
     m_flow_nominal=mRoo_flow_nominal,
     VRoo=VRoo,
-    allowFlowReversal=allowFlowReversal) "VAV box"
+    allowFlowReversal=allowFlowReversal,
+    vav(dpDamper_nominal=440))           "VAV box"
     annotation (Placement(transformation(extent={{-40,-88},{0,-48}})));
   Buildings.Fluid.FixedResistances.Junction splSupRoo(
     redeclare package Medium = MediumA,
