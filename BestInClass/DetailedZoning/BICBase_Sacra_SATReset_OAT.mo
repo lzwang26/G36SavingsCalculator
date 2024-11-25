@@ -1,12 +1,13 @@
 within BestInClass.DetailedZoning;
-model BICBase_Sacra
+model BICBase_Sacra_SATReset_OAT
   extends Modelica.Icons.Example;
   extends BaseClasses.PartialOpenLoop(par(
       idfFile=
-          "modelica://BestInClass/Resources/idf/EPlus/Validation/MediumOfficeDetailed_2004_sacramento_hvac.idf",
+          "modelica://BestInClass/Resources/idf/EPlus/Validation/OAT_reset/MediumOfficeDetailed_2004_sacramento_hvac.idf",
       weaFile=
           "modelica://BestInClass/Resources/weather/USA_CA_Sacramento.Metro.AP.724839_TMY3.mos",
       minAirFra=0.3,
+      TOutHigh=297.15,
       m_flow_zone=1.2*{0.0553358,0.040528,0.040357,0.022085,0.43118,0.398818,
           0.222669,0.222802,0.066113,1.07,0.986517,0.14797,0.149323,0.07028,
           0.493998,0.53816,0.59377,0.819185,0.097882,0.047462,0.045102},
@@ -62,17 +63,10 @@ model BICBase_Sacra
   Buildings.Controls.OBC.CDL.Continuous.Sources.Constant minAirFra(k=par.minAirFra)
     "Minimum zone airflow fraction"
     annotation (Placement(transformation(extent={{-80,-80},{-60,-60}})));
-  Modelica.Blocks.Sources.Constant TSupSetCoo(y(
-      final quantity="ThermodynamicTemperature",
-      final unit="K",
-      displayUnit="degC",
-      min=0), k=par.TSupSetCoo)
-                             "Supply air temperature setpoint for cooling"
-    annotation (Placement(transformation(extent={{-80,-50},{-60,-30}})));
 
   Modelica.Blocks.Sources.CombiTimeTable datRea(
     final fileName=ModelicaServices.ExternalReferences.loadResource(
-        "modelica://BestInClass/Resources/idf/EPlus/Validation/MediumOfficeDetailed_2004_sacramento_hvac.dat"),
+        "modelica://BestInClass/Resources/idf/EPlus/Validation/OAT_reset/MediumOfficeDetailed_2004_sacramento_hvac.dat"),
     final tableOnFile=true,
     final columns=2:45,
     final tableName="EnergyPlus",
@@ -104,17 +98,20 @@ model BICBase_Sacra
   Modelica.Blocks.Sources.RealExpression PFanSpa(y=AHU.fanSup.P)
     "Fan power consumption from Spawn"
     annotation (Placement(transformation(extent={{106,-58},{126,-38}})));
+  Controls.SupAirTemp TSupSetCoo(
+    TOutLow=par.TOutLow,
+    TOutHigh=par.TOutHigh,
+    TSupSetCooLow=par.TSupSetCooLow,
+    TSupSetCooHigh=par.TSupSetCooHigh)
+    annotation (Placement(transformation(extent={{-80,-50},{-60,-30}})));
+  Buildings.BoundaryConditions.WeatherData.Bus weaBus annotation (Placement(
+        transformation(extent={{-38,44},{-26,56}}), iconTransformation(extent=
+           {{-174,26},{-154,46}})));
 equation
   connect(pSetDuc.y,fanVFD.u)    annotation (Line(points={{-58,-10},{-22,-10}},
                                                                               color={0,0,127}));
-  connect(TSupSetCoo.y, AHU.TSupSetCoo) annotation (Line(points={{-59,-40},{8,
-          -40},{8,-7},{19,-7}}, color={0,0,127}));
   connect(minAirFra.y,Building.minAirFra)  annotation (Line(points={{-58,-70},{
           56,-70},{56,-15},{59,-15}}, color={0,0,127}));
-  connect(weather.weaBus, AHU.weaBus) annotation (Line(
-      points={{-60,50},{21.6,50},{21.6,-2}},
-      color={255,204,51},
-      thickness=0.5));
   connect(PCoiEPlu.y, ECoiEPlu.u)
     annotation (Line(points={{125,50},{136,50}}, color={0,0,127}));
   connect(PCoiSpa.y, ECoiESpa.u)
@@ -123,6 +120,32 @@ equation
     annotation (Line(points={{127,-18},{138,-18}}, color={0,0,127}));
   connect(PFanSpa.y, EFanESpa.u)
     annotation (Line(points={{127,-48},{138,-48}}, color={0,0,127}));
+  connect(TSupSetCoo.TSet, AHU.TSupSetCoo) annotation (Line(points={{-59,-40},{
+          6,-40},{6,-7},{19,-7}}, color={0,0,127}));
+  connect(weather.weaBus, weaBus) annotation (Line(
+      points={{-60,50},{-32,50}},
+      color={255,204,51},
+      thickness=0.5), Text(
+      string="%second",
+      index=1,
+      extent={{6,3},{6,3}},
+      horizontalAlignment=TextAlignment.Left));
+  connect(weaBus, AHU.weaBus) annotation (Line(
+      points={{-32,50},{21.6,50},{21.6,-2}},
+      color={255,204,51},
+      thickness=0.5), Text(
+      string="%first",
+      index=-1,
+      extent={{-3,6},{-3,6}},
+      horizontalAlignment=TextAlignment.Right));
+  connect(weaBus.TDryBul, TSupSetCoo.TOut) annotation (Line(
+      points={{-32,50},{-32,36},{-88,36},{-88,-39},{-81,-39}},
+      color={255,204,51},
+      thickness=0.5), Text(
+      string="%first",
+      index=-1,
+      extent={{-6,3},{-6,3}},
+      horizontalAlignment=TextAlignment.Right));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
         coordinateSystem(preserveAspectRatio=false),
                     graphics={
@@ -137,4 +160,4 @@ equation
         "SAC_Summer", file=
           "modelica://BestInClass/Resources/Script/DetailedZoning/SAC_Winter.mos"
         "SAC_Winter"));
-end BICBase_Sacra;
+end BICBase_Sacra_SATReset_OAT;
